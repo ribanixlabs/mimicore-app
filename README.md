@@ -30,17 +30,21 @@ text-to-speech in 23 languages · soundboard. Your voice, your device, your clou
 | 🔊 **Soundboard** | Built-in sounds plus your own clips, played straight into your mic. |
 | ⌨️ **Hotkeys and push-to-talk** | Start/stop, push-to-talk, mute and switch voices from inside any game. |
 | 🌐 **9 languages** | Use the app in English, हिन्दी, Español, Português, Français, Deutsch, Русский, 日本語 or Bahasa Indonesia. |
+| 💬 **AI support, built in** | Ask the assistant anything about the app. If it can't solve it, it opens a ticket with your approved diagnostics and keeps you updated until the fix is out: early builds to test, then the release. |
 | 🔒 **Private by design** | Everything runs on your PC. Optional cloud training uses only your own Google Drive and Colab. We never receive your recordings. |
 
 ## Plans
 
-**Trial:** 7 days of Pro for every new account, no card needed.
+**Free trial:** 7 days of Live or Studio. A refundable INR 2 / USD 1 charge verifies your payment method, billing starts after the trial, and you can cancel any time before it ends and pay nothing.
 
 **Free:** 20 minutes of live voice a day, built-in and gallery voices, all 28 effects and the soundboard (no limits), and short
 Speak / Dub clips (30 s).
 
-**Pro:** unlimited use plus cloning, mixing, importing and training voices. $6.99/month, $49.99/year or $89 lifetime
-(₹149 / ₹999 / ₹2,999 in India). Secure payments by Razorpay.
+**Live** (voice changer): unlimited live voice changing with built-in and gallery voices. $3.99/month, $29.99/year or $49
+lifetime (₹99 / ₹699 / ₹1,499 in India).
+
+**Studio** (everything): your own voices live, cloning, mixing, importing, training, Speak and Dub, all unlimited. $6.99/month,
+$49.99/year or $89 lifetime (₹149 / ₹999 / ₹2,999 in India). Secure payments by Razorpay.
 
 ## Requirements
 
@@ -76,8 +80,8 @@ Everything you need to go from download to talking, streaming and creating in an
 4. Choose a **quality tier**. It downloads once and every tier speaks 23 languages:
    - **Fast** (about 1.1 GB): lowest delay and graphics memory, best for gaming and low-spec PCs.
    - **Balanced** (about 1.3 GB): the recommended choice for most PCs.
-   - **Studio** (about 1.8 GB): the most polished speech and files, about 3× slower.
-5. **Sign in** with Google, Discord or email. New accounts get a 7-day Pro trial with no card. After that the free plan includes 20 minutes of live voice every day.
+   - **Ultra** (about 1.8 GB): the most polished speech and files, about 3× slower.
+5. **Sign in** with Google, Discord or email. It is free: 20 minutes of live voice every day. To try Live or Studio, start a 7-day free trial from your account page (a refundable INR 2 / USD 1 check of your payment method; billing starts after the trial; cancel any time before).
 6. A short tour on the **Live** page shows where everything is. The 28 voice effects work right away, even before a model finishes downloading.
 
 ## 2. Set up the virtual microphone
@@ -212,10 +216,18 @@ Use combinations (Ctrl + Alt + …) or keys you don't use elsewhere (F7–F12, n
 
 ## 10. Settings
 
-- **Account:** your plan (Free, Pro trial, Pro or Lifetime), **See Pro plans**, sign out.
+Settings has six tabs: **Account**, **Hotkeys**, **Add-ons**, **General** (theme, language, graphics card, window), **Privacy & data** (data folder, error reports, support info, export or delete your account) and **About** (updates, licenses).
+
+- **Add-ons** are optional downloads, each with a "why" and a "skip it if":
+  - **Voice engine** (pick one quality: Fast, Balanced or Ultra): powers Speak, instant cloning and live conversion of a cloned voice.
+  - **Trained voices**: "Use trained voices" (0.3 GB) runs trained or imported RVC voices live; "Voice Training" (2.5 GB, NVIDIA only) lets this PC train them. No NVIDIA card? Use free cloud training instead.
+  - **Video dubbing** (about 3 GB): translates a video's speech into your voice in another language, offline.
+  - **Cloud training** (optional): connect your Google Drive to train on a free Google GPU.
+- **Account:** your plan (Free, Live, Studio or Studio Lifetime, with a "trial" tag during a free trial), **See plans**, sign out.
   - Free plan: 20 live minutes a day, short Speak / Dub / conversion clips (30 s), no cloning, mixing, importing or training.
   - Always free: effects, the soundboard, the gallery and built-in voices.
-  - Pro (trial, monthly, annual or lifetime): everything unlimited.
+  - Live (monthly, annual or lifetime): unlimited live voice changing with built-in and gallery voices.
+  - Studio (monthly, annual or lifetime): everything unlimited, including your own voices live, cloning, mixing, importing, training, Speak and Dub.
 - **Hotkeys:** see section 9.
 - **Models & add-ons:** add or remove quality tiers, Trained voices (RVC v2), Voice Training and Dubbing.
 - **Appearance & language:** dark, light or match Windows. The interface is available in English, हिन्दी, Español, Português, Français, Deutsch, Русский, 日本語 and Bahasa Indonesia.
@@ -243,7 +255,7 @@ Use combinations (Ctrl + Alt + …) or keys you don't use elsewhere (F7–F12, n
 3. Replace the audio track in your editor and upload the SRT as subtitles.
 
 ### Voiceovers, narration and audiobooks
-1. Install the **Studio** tier for the most polished speech.
+1. Install the **Ultra** tier for the most polished speech.
 2. In **Speak**, paste your script, pick your voice and language, and choose **Save to file**.
 3. Long texts are rendered sentence by sentence.
 
@@ -262,7 +274,17 @@ For people who can't speak at times (illness, a sore throat, quiet places): reco
 ### Speak another language in your own voice
 Type in Spanish, Japanese or Hindi in **Speak**. Your cloned voice says it with natural pronunciation, which is great for presentations and practice.
 
-## 12. Troubleshooting
+## 12. Support: the assistant, tickets and early builds
+
+The **Support** tab (sign in first) is an assistant that knows the whole app and website. Ask anything: setup, voices, plans, errors.
+
+- **If it can solve it**, it answers with the exact steps and a link to the guide.
+- **If it can't**, it creates a support ticket for you (**Talk to a person** does this on request). You get an email at every step: received, confirmed as a real defect, fix in progress, a test build ready, resolved.
+- **Report a bug:** type what you did and roughly when it happened, then press **Report a bug**. Mimicore picks the matching part of its local log (it records the pages and buttons you used, never what you type), removes your Windows user name and email addresses, and shows you what it would attach. Nothing is sent until you press **Send ticket with log** (or **Send without log**).
+- **Your tickets** are listed at the top with their status. When a fix is ready you are emailed a link to an **early build**, or open **Settings › Updates › Check for early release**. Early builds are never installed automatically. Try what went wrong and press **It is fixed** or **Still broken**.
+- Deleting your account deletes your tickets, chats and logs.
+
+## 13. Troubleshooting
 
 | Problem | Fix |
 |---|---|
@@ -275,11 +297,12 @@ Type in Spanish, Japanese or Hindi in **Speak**. Your cloned voice says it with 
 | Training is greyed out | Training on the PC needs an NVIDIA card. Use **Cloud (free)** instead. |
 | Colab says no GPU is available | Free GPUs are limited at busy times. Try again later; training continues from the last checkpoint. |
 | The virtual mic doesn't appear | Restart Windows after the VB-CABLE install, then open Mimicore again. |
-| "Used today's free live minutes" | Free live minutes refill every day. Go Pro for unlimited use. |
-| "…is a Pro feature" | Cloning, mixing, importing and training need Pro or the 7-day trial (Settings › Account). |
-| Something else | Settings › Your data › **Open data folder** has the logs (`logs\mimicore.log`). [Report a bug](https://github.com/ribanixlabs/mimicore-app/issues/new?template=support.yml) and attach it. |
+| "Used today's free live minutes" | Free live minutes refill every day. Live or Studio removes the limit. |
+| "This PC isn't linked to your Studio plan" | Studio works on up to 2 PCs. Open Settings › Account › Your PCs (or the website account page), remove a PC you no longer use, then press Refresh. A removed PC can't be used with the account again. |
+| "…is part of Studio" | Cloning, mixing, importing, training and long Speak / Dub clips need Studio (or a Studio free trial, start it on your account page). |
+| Something else | Ask the **Support** tab: it answers or opens a ticket for you. Or Settings › Your data › **Copy support info** copies versions, graphics card, key settings and the last log lines (no personal data) to paste into your message. **Open data folder** has the full logs (`logs\mimicore.log`). The support email is on the website's contact page. |
 
-## 13. Privacy and responsible use
+## 14. Privacy and responsible use
 
 - **Your voice, your device, your cloud. Never ours.** Live voice, cloning, effects, speech, dubbing and training on your PC all run locally. Microphone audio is processed in memory and never stored or sent.
 - Optional cloud training uses only **your own** Google Drive and Colab. Mimicore can see only the files it creates there.
