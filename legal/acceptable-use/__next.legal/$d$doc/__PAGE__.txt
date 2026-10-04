@@ -4,34 +4,42 @@
 8:I[97367,["/mimicore-app/_next/static/chunks/1mpnoxox0-4cg.js"],"ViewportBoundary"]
 9:I[97367,["/mimicore-app/_next/static/chunks/1mpnoxox0-4cg.js"],"MetadataBoundary"]
 2:T5b4,NEVER use the software to 1. Impersonate a real person without their permission - including public figures, politicians, celebrities, family members, colleagues, customers, officials or support agents. 2. Commit or assist fraud, scams, phishing, extortion, social engineering, or to get past voice-based authentication (banks, phone systems, voice locks). 3. Put words in a real person's mouth: generate text-to-speech of statements a real person did not make and present them, or allow them to be taken, as genuine. 4. Make robocalls or other automated or mass calls. 5. Create election, political or news deepfakes, or any content meant to mislead the public. 6. Create sexual or intimate content with a real person's voice without their consent, or any content involving minors. 7. Clone the voice of a child. 8. Harass, threaten, bully, defame or intimidate anyone. 9. Infringe copyright, personality, publicity or privacy rights - for example releasing songs or audiobooks in a performer's cloned voice without permission. 10. Clone a voice taken from calls, videos, broadcasts or other recordings of someone who has not agreed. 11. Break any law that applies to you. Examples include India's Information Technology Act (sections 66C and 66D) and the IT Rules on synthetically generated information, US FCC rules on AI voices in robocalls, state voice-likeness laws such as Tennessee's ELVIS Act, and the EU AI Act transparency duties for synthetic audio.7:X
-1b:X
-1b:C
-0:{"buildId":"NNepMKwLanc6nNX9Yt4Mr","data":[{"rsc":["$","$1","c",{"children":[["$","main",null,{"children":["$","article",null,{"className":"card legal-doc","children":[["$","h1","0",{"children":"MIMICORE - ACCEPTABLE USE POLICY"}],["$","p","1",{"className":"ver","children":"Version 2026-10-08"}],["$","p","2",{"children":"Mimicore can copy a voice from about ten seconds of speech. That makes it easy to misuse, so these rules are part of the license. Breaking them ends your right to use the software."}],["$","h2","3",{"children":"ALWAYS"}],["$","ul","4",{"children":[["$","li","0",{"children":"Clone only your own voice, or the voice of a person who has given you clear, informed permission for this specific purpose. Written permission is strongly recommended."}],["$","li","1",{"children":"Record the speaker's spoken consent statement in the app when you create a voice (the app requires it)."}],["$","li","2",{"children":"Tell people when speech is AI-generated whenever they could otherwise be misled - in calls, streams, videos, podcasts, messages and published audio."}],["$","li","3",{"children":"Keep the \"AI-generated\" marking that the app writes into saved files."}]]}],["$","p","5",{"children":"$2"}],["$","h2","6",{"children":"REPORTING MISUSE"}],["$","p","7",{"children":"Report suspected misuse to ribanixlabs@zohomail.in (subject \"Abuse report\") or https://github.com/ribanixlabs/mimicore-app/issues/new?template=abuse.yml."}]]}]}],null,["$","$L3",null,{"children":["$","$4",null,{"name":"Next.MetadataOutlet","children":"$@5"}]}]]}],"isPartial":"$@6","staleTime":"$7","varyParams":null},{"rsc":["$","$1","h",{"children":[null,["$","$L8",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","2",{"name":"theme-color","content":"#07080d"}],["$","meta","3",{"name":"color-scheme","content":"dark"}]]}],["$","div",null,{"hidden":true,"children":["$","$L9",null,{"children":["$","$4",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"Acceptable Use Policy · Mimicore"}],["$","meta","1",{"name":"description","content":"Mimicore by Ribanix Labs: real-time AI voice changer, instant voice cloning, RVC voice training, video dubbing in your own voice, 28 free voice effects, a soundboard and text-to-speech in 23 languages. Your voice never leaves your device; optional cloud training runs in your own Google account. Free plan with every feature."}],"$La","$Lb","$Lc","$Ld","$Le","$Lf","$L10","$L11","$L12","$L13","$L14","$L15","$L16","$L17"]}]}]}],null]}],"isPartial":"$@18","staleTime":"$7","varyParams":null},{"rsc":"$L19","isPartial":"$@1a","staleTime":"$7","varyParams":"$1b"},{"rsc":"$L1c","isPartial":"$@1d","staleTime":"$7","varyParams":"$1b"}],"isUpgradeableISRFallback":false,"a":"$@1e","rootVaryParams":null,"needsRuntimeRequest":"$@1f"}
-20:I[27201,["/mimicore-app/_next/static/chunks/1mpnoxox0-4cg.js"],"IconMark"]
-21:I[39756,["/mimicore-app/_next/static/chunks/1mpnoxox0-4cg.js"],"default"]
-22:I[37457,["/mimicore-app/_next/static/chunks/1mpnoxox0-4cg.js"],"default"]
+23:X
+23:C
+0:{"buildId":"RU_3reE6QbA8RnuibkUNa","data":[{"rsc":["$","$1","c",{"children":[["$","main",null,{"children":["$","article",null,{"className":"card legal-doc","children":[["$","h1","0",{"children":"MIMICORE - ACCEPTABLE USE POLICY"}],["$","p","1",{"className":"ver","children":"Version 2026-10-08"}],["$","p","2",{"children":"Mimicore can copy a voice from about ten seconds of speech. That makes it easy to misuse, so these rules are part of the license. Breaking them ends your right to use the software."}],["$","h2","3",{"children":"ALWAYS"}],["$","ul","4",{"children":[["$","li","0",{"children":"Clone only your own voice, or the voice of a person who has given you clear, informed permission for this specific purpose. Written permission is strongly recommended."}],["$","li","1",{"children":"Record the speaker's spoken consent statement in the app when you create a voice (the app requires it)."}],["$","li","2",{"children":"Tell people when speech is AI-generated whenever they could otherwise be misled - in calls, streams, videos, podcasts, messages and published audio."}],["$","li","3",{"children":"Keep the \"AI-generated\" marking that the app writes into saved files."}]]}],["$","p","5",{"children":"$2"}],["$","h2","6",{"children":"REPORTING MISUSE"}],["$","p","7",{"children":"Report suspected misuse to ribanixlabs@zohomail.in (subject \"Abuse report\") or https://github.com/ribanixlabs/mimicore-app/issues/new?template=abuse.yml."}]]}]}],null,["$","$L3",null,{"children":["$","$4",null,{"name":"Next.MetadataOutlet","children":"$@5"}]}]]}],"isPartial":"$@6","staleTime":"$7","varyParams":null},{"rsc":["$","$1","h",{"children":[null,["$","$L8",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","2",{"name":"theme-color","content":"#07080d"}],["$","meta","3",{"name":"color-scheme","content":"dark"}]]}],["$","div",null,{"hidden":true,"children":["$","$L9",null,{"children":["$","$4",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"Acceptable Use Policy · Mimicore"}],["$","meta","1",{"name":"description","content":"Mimicore by Ribanix Labs: real-time AI voice changer, instant voice cloning, RVC voice training, video dubbing in your own voice, 28 free voice effects, a soundboard and text-to-speech in 23 languages. Your voice never leaves your device; optional cloud training runs in your own Google account. Free to start, with a 7-day free trial of the paid plans."}],"$La","$Lb","$Lc","$Ld","$Le","$Lf","$L10","$L11","$L12","$L13","$L14","$L15","$L16","$L17","$L18","$L19","$L1a","$L1b","$L1c","$L1d","$L1e","$L1f"]}]}]}],null]}],"isPartial":"$@20","staleTime":"$7","varyParams":null},{"rsc":"$L21","isPartial":"$@22","staleTime":"$7","varyParams":"$23"},{"rsc":"$L24","isPartial":"$@25","staleTime":"$7","varyParams":"$23"}],"isUpgradeableISRFallback":false,"a":"$@26","rootVaryParams":null,"needsRuntimeRequest":"$@27"}
+28:I[27201,["/mimicore-app/_next/static/chunks/1mpnoxox0-4cg.js"],"IconMark"]
+29:I[39756,["/mimicore-app/_next/static/chunks/1mpnoxox0-4cg.js"],"default"]
+2a:I[37457,["/mimicore-app/_next/static/chunks/1mpnoxox0-4cg.js"],"default"]
 5:null
 a:["$","meta","2",{"name":"application-name","content":"Mimicore"}]
 b:["$","meta","3",{"name":"author","content":"Ribanix Labs"}]
 c:["$","meta","4",{"name":"keywords","content":"AI voice changer,voice cloning,real-time voice changer,RVC,text to speech,Discord voice changer,voice effects,AI dubbing,soundboard,Windows"}]
-d:["$","link","5",{"rel":"canonical","href":"https://ribanixlabs.github.io/mimicore-app/"}]
+d:["$","link","5",{"rel":"canonical","href":"https://ribanixlabs.github.io/mimicore-app/legal/acceptable-use/"}]
 e:["$","meta","6",{"property":"og:title","content":"Mimicore — Clone. Change. Create."}]
-f:["$","meta","7",{"property":"og:description","content":"Mimicore by Ribanix Labs: real-time AI voice changer, instant voice cloning, RVC voice training, video dubbing in your own voice, 28 free voice effects, a soundboard and text-to-speech in 23 languages. Your voice never leaves your device; optional cloud training runs in your own Google account. Free plan with every feature."}]
+f:["$","meta","7",{"property":"og:description","content":"Mimicore by Ribanix Labs: real-time AI voice changer, instant voice cloning, RVC voice training, video dubbing in your own voice, 28 free voice effects, a soundboard and text-to-speech in 23 languages. Your voice never leaves your device; optional cloud training runs in your own Google account. Free to start, with a 7-day free trial of the paid plans."}]
 10:["$","meta","8",{"property":"og:url","content":"https://ribanixlabs.github.io/mimicore-app/"}]
 11:["$","meta","9",{"property":"og:site_name","content":"Mimicore"}]
-12:["$","meta","10",{"property":"og:type","content":"website"}]
-13:["$","meta","11",{"name":"twitter:card","content":"summary"}]
-14:["$","meta","12",{"name":"twitter:title","content":"Mimicore — Clone. Change. Create."}]
-15:["$","meta","13",{"name":"twitter:description","content":"Mimicore by Ribanix Labs: real-time AI voice changer, instant voice cloning, RVC voice training, video dubbing in your own voice, 28 free voice effects, a soundboard and text-to-speech in 23 languages. Your voice never leaves your device; optional cloud training runs in your own Google account. Free plan with every feature."}]
-16:["$","link","14",{"rel":"icon","href":"/mimicore-app/icon.svg?icon.05_4mpzp60w3a.svg","sizes":"any","type":"image/svg+xml"}]
-17:["$","$L20","15",{}]
-19:["$","$1","c",{"children":[null,["$","$L21",null,{"parallelRouterKey":"children","template":["$","$L22",null,{}]}]]}]
-1c:["$","$1","c",{"children":[null,["$","$L21",null,{"parallelRouterKey":"children","template":["$","$L22",null,{}]}]]}]
-1f:true
+12:["$","meta","10",{"property":"og:image","content":"https://ribanixlabs.github.io/mimicore-app/opengraph-image.png?opengraph-image.1nhclg7yznik6.png"}]
+13:["$","meta","11",{"property":"og:image:type","content":"image/png"}]
+14:["$","meta","12",{"property":"og:image:width","content":"1200"}]
+15:["$","meta","13",{"property":"og:image:height","content":"630"}]
+16:["$","meta","14",{"property":"og:type","content":"website"}]
+17:["$","meta","15",{"name":"twitter:card","content":"summary_large_image"}]
+18:["$","meta","16",{"name":"twitter:title","content":"Mimicore — Clone. Change. Create."}]
+19:["$","meta","17",{"name":"twitter:description","content":"Mimicore by Ribanix Labs: real-time AI voice changer, instant voice cloning, RVC voice training, video dubbing in your own voice, 28 free voice effects, a soundboard and text-to-speech in 23 languages. Your voice never leaves your device; optional cloud training runs in your own Google account. Free to start, with a 7-day free trial of the paid plans."}]
+1a:["$","meta","18",{"name":"twitter:image","content":"https://ribanixlabs.github.io/mimicore-app/opengraph-image.png?opengraph-image.1nhclg7yznik6.png"}]
+1b:["$","meta","19",{"name":"twitter:image:type","content":"image/png"}]
+1c:["$","meta","20",{"name":"twitter:image:width","content":"1200"}]
+1d:["$","meta","21",{"name":"twitter:image:height","content":"630"}]
+1e:["$","link","22",{"rel":"icon","href":"/mimicore-app/icon.svg?icon.05_4mpzp60w3a.svg","sizes":"any","type":"image/svg+xml"}]
+1f:["$","$L28","23",{}]
+21:["$","$1","c",{"children":[null,["$","$L29",null,{"parallelRouterKey":"children","template":["$","$L2a",null,{}]}]]}]
+24:["$","$1","c",{"children":[null,["$","$L29",null,{"parallelRouterKey":"children","template":["$","$L2a",null,{}]}]]}]
+27:true
 7:300
 7:C
-1e:0
-18:"$undefined"
-1a:"$undefined"
-1d:"$undefined"
+26:0
+20:"$undefined"
+22:"$undefined"
+25:"$undefined"
 6:"$undefined"

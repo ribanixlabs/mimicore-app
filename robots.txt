@@ -1,0 +1,6 @@
+User-Agent: *
+Allow: /
+Disallow: /mimicore-app/admin/
+Disallow: /mimicore-app/account/
+
+Sitemap: https://ribanixlabs.github.io/mimicore-app/sitemap.xml
