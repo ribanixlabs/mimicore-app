@@ -6,7 +6,7 @@
 Live voice changer · instant voice cloning · trained voices · video dubbing · 28 free voice effects ·
 text-to-speech in 23 languages · soundboard. Your voice, your device, your cloud. Never ours.
 
-**[⬇ Download for Windows](https://github.com/ribanixlabs/mimicore-app/releases/latest/download/Mimicore-setup.exe)** ·
+**[⬇ Download for Windows](https://ribanixlabs.github.io/mimicore-app/#download)** ·
 [Website](https://ribanixlabs.github.io/mimicore-app/) ·
 [User guide](#-user-guide) ·
 [Account & Pro](https://ribanixlabs.github.io/mimicore-app/account/) ·
@@ -74,9 +74,9 @@ Everything you need to go from download to talking, streaming and creating in an
 
 ## 1. Install and first start
 
-1. Download **Mimicore-setup.exe** from the [latest release](https://github.com/ribanixlabs/mimicore-app/releases/latest/download/Mimicore-setup.exe) and run it. It installs for your Windows user only and needs no admin rights.
+1. Download **Mimicore-setup.exe** from the [download page](https://ribanixlabs.github.io/mimicore-app/#download) (you agree to the terms there) and run it. It installs for your Windows user only and needs no admin rights.
 2. If Windows shows "Windows protected your PC", click **More info › Run anyway**. Mimicore is new and not yet code-signed; every update is still signed and verified by the app.
-3. Read and accept the terms. You must be 18 or older and clone only your own voice or voices you have permission to use.
+3. The app shows no terms screen: you accept the terms once, on the download page, before the installer downloads. You must be 18 or older and clone only your own voice or voices you have permission to use.
 4. Choose a **quality tier**. It downloads once and every tier speaks 23 languages:
    - **Fast** (about 1.1 GB): lowest delay and graphics memory, best for gaming and low-spec PCs.
    - **Balanced** (about 1.3 GB): the recommended choice for most PCs.
@@ -125,10 +125,8 @@ Open **Voices & effects**.
 
 ### Instant voice (10–20 seconds)
 1. Click **+ Instant voice** and give the voice a name.
-2. Choose whose voice it is: your own, or someone who has given you permission.
-3. Record about 15–20 seconds of natural, continuous speech in a quiet room, or import a clean recording. Background noise is removed automatically.
-4. For someone else's voice, they record a short spoken consent statement. Mimicore checks that it's the same person.
-5. Click **Create voice**. It's ready in under a minute and works live, in Speak and in Dub.
+2. Record about 15–20 seconds of natural, continuous speech in a quiet room, or import a clean recording. Background noise is removed automatically.
+3. Click **Create voice**. It's ready in under a minute and works live, in Speak and in Dub.
 
 ### Voice gallery
 Click **Get the voice gallery (27 MB)** once, then press ▶ to hear the voices and **Add to my voices** to use one. There are 19 original voices, and each is a blend of two speakers, so none copies a real person.
