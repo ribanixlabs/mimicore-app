@@ -103,7 +103,7 @@ The virtual microphone lets Discord, Zoom, OBS and games hear your changed voice
    - **Low** (about 0.35 s): quickest reaction, for gaming.
    - **Medium** (about 0.45 s): recommended.
    - **High** (about 0.5 s): most natural, for streams and recordings.
-4. Trained voices are **auto-tuned** to your PC for the lowest delay it can sustain (about 0.3 s on a mid-range GPU).
+4. Trained voices have the same **Quality** switch: **Auto** (tuned to your PC for the lowest delay it can sustain, about 0.3 s on a mid-range GPU), **Low** (lowest delay, about 0.3 s), **Medium** (about 0.5 s, steadier) and **High** (about 0.7 s, the smoothest and most stable).
 5. **Self-healing:** while you talk, Mimicore watches how long each block takes and whether the sound glitches. If your PC cannot keep up (a game starts, the laptop throttles) it moves to a lighter setting within seconds and says so; after a long calm stretch it moves back up. The **Live engine** panel under the stage shows it live: block time against block length, **CPU** (the main load of instant voices) and **GPU** (the main load of trained voices), video memory, glitches, delay, the current step and how often it adjusted.
 6. **Tune for this PC** (Settings › Add-ons) re-runs the benchmark any time: after a hardware or driver change, or if a voice stutters. **Thorough test** measures more steps. Stop the live voice first.
 
