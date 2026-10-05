@@ -306,7 +306,7 @@ The **Support** tab (sign in first) is an assistant that knows the whole app and
 
 - **Your voice, your device, your cloud. Never ours.** Live voice, cloning, effects, speech, dubbing and training on your PC all run locally. Microphone audio is processed in memory and never stored or sent.
 - Optional cloud training uses only **your own** Google Drive and Colab. Mimicore can see only the files it creates there.
-- We store only your account email and plan. Error reports are off unless you turn them on.
+- The Support assistant sends what you type to our server and an AI provider; do not type passwords or payment details. Tickets (conversation plus a log you approve) are kept until you delete your account. We otherwise store only your account email and plan. Error reports are off unless you turn them on.
 - Clone only your own voice or voices you have permission to use. Never use a cloned voice to deceive, defraud or impersonate anyone. Generated files are marked as AI-generated.
 - Full texts: [Acceptable Use](https://ribanixlabs.github.io/mimicore-app/legal/acceptable-use/) · [License](https://ribanixlabs.github.io/mimicore-app/legal/eula/) · [Privacy](https://ribanixlabs.github.io/mimicore-app/legal/privacy/).
 
