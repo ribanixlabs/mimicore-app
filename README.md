@@ -79,7 +79,7 @@ Everything you need to go from download to talking, streaming and creating in an
 3. The app shows no terms screen: you accept the terms once, on the download page, before the installer downloads. You must be 18 or older and clone only your own voice or voices you have permission to use.
 4. Pick what to install: **Instant voice cloning** (clone a voice from 10–20 seconds, 23 languages, also powers Speak and Dub) and **Trained voices (RVC)** (use voices you trained or imported, lowest delay). Mimicore chooses the model size that suits your PC (about 1 to 2 GB for instant cloning, 0.3 GB for trained voices), downloads it, then **tunes itself to your PC**: it runs both engines for a few seconds and stores what your PC can keep smooth. Strong PCs start at the best quality, weak PCs at a lighter but still good setting. Dubbing and Voice Training are optional add-ons later in Settings.
 5. **Sign in** with Google, Discord or email. It is free: 20 minutes of live voice every day. To try Live or Studio, start a 7-day free trial from your account page (a refundable INR 2 / USD 1 check of your payment method; billing starts after the trial; cancel any time before).
-6. A short tour on the **Live** page shows where everything is. The 28 voice effects work right away, even before a model finishes downloading.
+6. A tour of every page (Live, Speak, Dub, Voices, Soundboard, Support, Settings) shows where everything is. After each update that changes the interface, a short **What's new** tour shows only what changed. Press Esc to skip a tour. The 28 voice effects work right away, even before a model finishes downloading.
 
 ## 2. Set up the virtual microphone
 
