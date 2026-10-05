@@ -100,10 +100,14 @@ The virtual microphone lets Discord, Zoom, OBS and games hear your changed voice
 2. Speak. The status line shows the **delay**, the processing time per block and any **glitches**.
 3. Instant voices have a **Quality** switch. **Auto** (the default) uses what the benchmark found and keeps adjusting while you talk; the manual choices are below:
    - **Lite** (about 0.5 to 1.4 s, adapts to your PC): for slower PCs and integrated graphics. It is selected automatically on a PC without a graphics card of 3 GB or more, and Mimicore steps down to a lighter quality by itself if the voice cannot keep up.
-   - **Low** (about 0.35 s): quickest reaction, for gaming.
-   - **Medium** (about 0.45 s): recommended.
-   - **High** (about 0.5 s): most natural, for streams and recordings.
-4. Trained voices have the same **Quality** switch: **Auto** (tuned to your PC for the lowest delay it can sustain, about 0.3 s on a mid-range GPU), **Low** (lowest delay, about 0.3 s), **Medium** (about 0.5 s, steadier) and **High** (about 0.7 s, the smoothest and most stable).
+   - **Low** (about 0.35 s): quickest reaction, for gaming. Drawback: a slightly less polished sound.
+   - **Medium** (about 0.45 s): a good balance of reaction and quality.
+   - **High** (about 0.5 s): most natural and stable, for streams and recordings. Drawback: the highest delay of the three.
+4. Trained voices have the same **Quality** switch:
+   - **Auto**: tuned to your PC for the lowest delay it can sustain (about 0.3 s on a mid-range GPU). Drawback: the delay can change a little when it adjusts.
+   - **Low** (about 0.3 s): the lowest delay, great for gaming and calls. Drawback: the most work for your PC, so it can stutter on a busy or weak one.
+   - **Medium** (about 0.5 s): balanced, steadier with less load. Drawback: a slower reaction than Low.
+   - **High** (about 0.7 s): the smoothest and most stable sound with the least load on your PC, good for streaming and recording. Drawback: the highest delay.
 5. **Self-healing:** while you talk, Mimicore watches how long each block takes and whether the sound glitches. If your PC cannot keep up (a game starts, the laptop throttles) it moves to a lighter setting within seconds and says so; after a long calm stretch it moves back up. The **Live engine** panel under the stage shows it live: block time against block length, **CPU** (the main load of instant voices) and **GPU** (the main load of trained voices), video memory, glitches, delay, the current step and how often it adjusted.
 6. **Tune for this PC** (Settings › Add-ons) re-runs the benchmark any time: after a hardware or driver change, or if a voice stutters. **Thorough test** measures more steps. Stop the live voice first.
 
