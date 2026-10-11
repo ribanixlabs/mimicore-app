@@ -4,41 +4,37 @@
 8:I[97367,["/mimicore-app/_next/static/chunks/1mpnoxox0-4cg.js"],"ViewportBoundary"]
 9:I[97367,["/mimicore-app/_next/static/chunks/1mpnoxox0-4cg.js"],"MetadataBoundary"]
 2:T5b4,NEVER use the software to 1. Impersonate a real person without their permission - including public figures, politicians, celebrities, family members, colleagues, customers, officials or support agents. 2. Commit or assist fraud, scams, phishing, extortion, social engineering, or to get past voice-based authentication (banks, phone systems, voice locks). 3. Put words in a real person's mouth: generate text-to-speech of statements a real person did not make and present them, or allow them to be taken, as genuine. 4. Make robocalls or other automated or mass calls. 5. Create election, political or news deepfakes, or any content meant to mislead the public. 6. Create sexual or intimate content with a real person's voice without their consent, or any content involving minors. 7. Clone the voice of a child. 8. Harass, threaten, bully, defame or intimidate anyone. 9. Infringe copyright, personality, publicity or privacy rights - for example releasing songs or audiobooks in a performer's cloned voice without permission. 10. Clone a voice taken from calls, videos, broadcasts or other recordings of someone who has not agreed. 11. Break any law that applies to you. Examples include India's Information Technology Act (sections 66C and 66D) and the IT Rules on synthetically generated information, US FCC rules on AI voices in robocalls, state voice-likeness laws such as Tennessee's ELVIS Act, and the EU AI Act transparency duties for synthetic audio.7:X
-22:X
-22:C
-0:{"buildId":"fwFEBnJC64YbI4_r6oFMd","data":[{"rsc":["$","$1","c",{"children":[["$","main",null,{"children":["$","article",null,{"className":"card legal-doc","children":[["$","h1","0",{"children":"MIMICORE - ACCEPTABLE USE POLICY"}],["$","p","1",{"className":"ver","children":"Version 2026-10-13"}],["$","p","2",{"children":"Mimicore can copy a voice from about ten seconds of speech. That makes it easy to misuse, so these rules are part of the license. Breaking them ends your right to use the software."}],["$","h2","3",{"children":"ALWAYS"}],["$","ul","4",{"children":[["$","li","0",{"children":"Clone only your own voice, or the voice of a person who has given you clear, informed permission for this specific purpose. Written permission is strongly recommended."}],["$","li","1",{"children":"Get the speaker's consent yourself before you create a voice from their recordings; the app does not ask for it."}],["$","li","2",{"children":"Tell people when speech is AI-generated whenever they could otherwise be misled - in calls, streams, videos, podcasts, messages and published audio."}],["$","li","3",{"children":"Keep the \"AI-generated\" marking that the app writes into saved files."}]]}],["$","p","5",{"children":"$2"}],["$","h2","6",{"children":"REPORTING MISUSE"}],["$","p","7",{"children":"Report suspected misuse to ribanixlabs@zohomail.in (subject \"Abuse report\") or https://github.com/ribanixlabs/mimicore-app/issues/new?template=abuse.yml."}]]}]}],null,["$","$L3",null,{"children":["$","$4",null,{"name":"Next.MetadataOutlet","children":"$@5"}]}]]}],"isPartial":"$@6","staleTime":"$7","varyParams":null},{"rsc":["$","$1","h",{"children":[null,["$","$L8",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","2",{"name":"theme-color","content":"#07080d"}],["$","meta","3",{"name":"color-scheme","content":"dark"}]]}],["$","div",null,{"hidden":true,"children":["$","$L9",null,{"children":["$","$4",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"Acceptable Use Policy · Mimicore"}],["$","meta","1",{"name":"description","content":"Real-time AI voice changer and voice cloning for Windows. Private, runs on your PC. 28 free effects, text to speech, dubbing. Free plan, 7-day trial."}],"$La","$Lb","$Lc","$Ld","$Le","$Lf","$L10","$L11","$L12","$L13","$L14","$L15","$L16","$L17","$L18","$L19","$L1a","$L1b","$L1c","$L1d","$L1e"]}]}]}],null]}],"isPartial":"$@1f","staleTime":"$7","varyParams":null},{"rsc":"$L20","isPartial":"$@21","staleTime":"$7","varyParams":"$22"},{"rsc":"$L23","isPartial":"$@24","staleTime":"$7","varyParams":"$22"}],"isUpgradeableISRFallback":false,"a":"$@25","rootVaryParams":null,"needsRuntimeRequest":"$@26"}
-27:I[27201,["/mimicore-app/_next/static/chunks/1mpnoxox0-4cg.js"],"IconMark"]
-28:I[39756,["/mimicore-app/_next/static/chunks/1mpnoxox0-4cg.js"],"default"]
-29:I[37457,["/mimicore-app/_next/static/chunks/1mpnoxox0-4cg.js"],"default"]
+1e:X
+1e:C
+0:{"buildId":"u2dyPzQTl8UI4EZ02C88b","data":[{"rsc":["$","$1","c",{"children":[["$","main",null,{"children":["$","article",null,{"className":"card legal-doc","children":[["$","h1","0",{"children":"MIMICORE - ACCEPTABLE USE POLICY"}],["$","p","1",{"className":"ver","children":"Version 2026-10-13"}],["$","p","2",{"children":"Mimicore can copy a voice from about ten seconds of speech. That makes it easy to misuse, so these rules are part of the license. Breaking them ends your right to use the software."}],["$","h2","3",{"children":"ALWAYS"}],["$","ul","4",{"children":[["$","li","0",{"children":"Clone only your own voice, or the voice of a person who has given you clear, informed permission for this specific purpose. Written permission is strongly recommended."}],["$","li","1",{"children":"Get the speaker's consent yourself before you create a voice from their recordings; the app does not ask for it."}],["$","li","2",{"children":"Tell people when speech is AI-generated whenever they could otherwise be misled - in calls, streams, videos, podcasts, messages and published audio."}],["$","li","3",{"children":"Keep the \"AI-generated\" marking that the app writes into saved files."}]]}],["$","p","5",{"children":"$2"}],["$","h2","6",{"children":"REPORTING MISUSE"}],["$","p","7",{"children":"Report suspected misuse to ribanixlabs@zohomail.in (subject \"Abuse report\") or https://github.com/ribanixlabs/mimicore-app/issues/new?template=abuse.yml."}]]}]}],null,["$","$L3",null,{"children":["$","$4",null,{"name":"Next.MetadataOutlet","children":"$@5"}]}]]}],"isPartial":"$@6","staleTime":"$7","varyParams":null},{"rsc":["$","$1","h",{"children":[null,["$","$L8",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","2",{"name":"theme-color","content":"#07080d"}],["$","meta","3",{"name":"color-scheme","content":"dark"}]]}],["$","div",null,{"hidden":true,"children":["$","$L9",null,{"children":["$","$4",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"Acceptable Use Policy · Mimicore"}],["$","meta","1",{"name":"description","content":"What you may and may not do with Mimicore, including rules on cloning voices only with permission."}],["$","meta","2",{"name":"application-name","content":"Mimicore"}],"$La","$Lb","$Lc","$Ld","$Le","$Lf","$L10","$L11","$L12","$L13","$L14","$L15","$L16","$L17","$L18","$L19","$L1a"]}]}]}],null]}],"isPartial":"$@1b","staleTime":"$7","varyParams":null},{"rsc":"$L1c","isPartial":"$@1d","staleTime":"$7","varyParams":"$1e"},{"rsc":"$L1f","isPartial":"$@20","staleTime":"$7","varyParams":"$1e"}],"isUpgradeableISRFallback":false,"a":"$@21","rootVaryParams":null,"needsRuntimeRequest":"$@22"}
+23:I[27201,["/mimicore-app/_next/static/chunks/1mpnoxox0-4cg.js"],"IconMark"]
+24:I[39756,["/mimicore-app/_next/static/chunks/1mpnoxox0-4cg.js"],"default"]
+25:I[37457,["/mimicore-app/_next/static/chunks/1mpnoxox0-4cg.js"],"default"]
 5:null
-a:["$","meta","2",{"name":"application-name","content":"Mimicore"}]
-b:["$","meta","3",{"name":"author","content":"Ribanix Labs"}]
-c:["$","link","4",{"rel":"canonical","href":"https://ribanixlabs.github.io/mimicore-app/legal/acceptable-use/"}]
-d:["$","meta","5",{"property":"og:title","content":"Mimicore: AI Voice Changer & Voice Cloning for Windows"}]
-e:["$","meta","6",{"property":"og:description","content":"Real-time AI voice changer and voice cloning for Windows. Private, runs on your PC. 28 free effects, text to speech, dubbing. Free plan, 7-day trial."}]
-f:["$","meta","7",{"property":"og:url","content":"https://ribanixlabs.github.io/mimicore-app/"}]
-10:["$","meta","8",{"property":"og:site_name","content":"Mimicore"}]
-11:["$","meta","9",{"property":"og:image","content":"https://ribanixlabs.github.io/mimicore-app/opengraph-image.png?opengraph-image.1nhclg7yznik6.png"}]
-12:["$","meta","10",{"property":"og:image:type","content":"image/png"}]
-13:["$","meta","11",{"property":"og:image:width","content":"1200"}]
-14:["$","meta","12",{"property":"og:image:height","content":"630"}]
-15:["$","meta","13",{"property":"og:type","content":"website"}]
-16:["$","meta","14",{"name":"twitter:card","content":"summary_large_image"}]
-17:["$","meta","15",{"name":"twitter:title","content":"Mimicore: AI Voice Changer & Voice Cloning for Windows"}]
-18:["$","meta","16",{"name":"twitter:description","content":"Real-time AI voice changer and voice cloning for Windows. Private, runs on your PC. 28 free effects, text to speech, dubbing. Free plan, 7-day trial."}]
-19:["$","meta","17",{"name":"twitter:image","content":"https://ribanixlabs.github.io/mimicore-app/opengraph-image.png?opengraph-image.1nhclg7yznik6.png"}]
-1a:["$","meta","18",{"name":"twitter:image:type","content":"image/png"}]
-1b:["$","meta","19",{"name":"twitter:image:width","content":"1200"}]
-1c:["$","meta","20",{"name":"twitter:image:height","content":"630"}]
-1d:["$","link","21",{"rel":"icon","href":"/mimicore-app/icon.svg?icon.05_4mpzp60w3a.svg","sizes":"any","type":"image/svg+xml"}]
-1e:["$","$L27","22",{}]
-20:["$","$1","c",{"children":[null,["$","$L28",null,{"parallelRouterKey":"children","template":["$","$L29",null,{}]}]]}]
-23:["$","$1","c",{"children":[null,["$","$L28",null,{"parallelRouterKey":"children","template":["$","$L29",null,{}]}]]}]
-26:true
+a:["$","meta","3",{"name":"author","content":"Ribanix Labs"}]
+b:["$","link","4",{"rel":"canonical","href":"https://ribanixlabs.github.io/mimicore-app/legal/acceptable-use/"}]
+c:["$","meta","5",{"property":"og:title","content":"Acceptable Use Policy · Mimicore"}]
+d:["$","meta","6",{"property":"og:description","content":"What you may and may not do with Mimicore, including rules on cloning voices only with permission."}]
+e:["$","meta","7",{"property":"og:url","content":"https://ribanixlabs.github.io/mimicore-app/legal/acceptable-use/"}]
+f:["$","meta","8",{"property":"og:site_name","content":"Mimicore"}]
+10:["$","meta","9",{"property":"og:image","content":"https://ribanixlabs.github.io/mimicore-app/opengraph-image.png"}]
+11:["$","meta","10",{"property":"og:image:width","content":"1200"}]
+12:["$","meta","11",{"property":"og:image:height","content":"630"}]
+13:["$","meta","12",{"property":"og:image:alt","content":"Mimicore: AI voice changer and voice cloning for Windows"}]
+14:["$","meta","13",{"property":"og:type","content":"website"}]
+15:["$","meta","14",{"name":"twitter:card","content":"summary_large_image"}]
+16:["$","meta","15",{"name":"twitter:title","content":"Acceptable Use Policy · Mimicore"}]
+17:["$","meta","16",{"name":"twitter:description","content":"What you may and may not do with Mimicore, including rules on cloning voices only with permission."}]
+18:["$","meta","17",{"name":"twitter:image","content":"https://ribanixlabs.github.io/mimicore-app/opengraph-image.png"}]
+19:["$","link","18",{"rel":"icon","href":"/mimicore-app/icon.svg?icon.05_4mpzp60w3a.svg","sizes":"any","type":"image/svg+xml"}]
+1a:["$","$L23","19",{}]
+1c:["$","$1","c",{"children":[null,["$","$L24",null,{"parallelRouterKey":"children","template":["$","$L25",null,{}]}]]}]
+1f:["$","$1","c",{"children":[null,["$","$L24",null,{"parallelRouterKey":"children","template":["$","$L25",null,{}]}]]}]
+22:true
 7:300
 7:C
-25:0
-1f:"$undefined"
-21:"$undefined"
-24:"$undefined"
+21:0
+1b:"$undefined"
+1d:"$undefined"
+20:"$undefined"
 6:"$undefined"
