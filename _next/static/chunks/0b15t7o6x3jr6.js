@@ -11,7 +11,7 @@
 .adm-tabs button:hover { color: var(--text); background: rgba(255,255,255,.06); }
 .adm-tabs button.on { background: linear-gradient(135deg,#9a8bff,#6a5ae0); color: #fff; box-shadow: 0 6px 20px rgba(124,108,240,.4), inset 0 1px 0 rgba(255,255,255,.25); }
 @media (min-width: 1000px) {
-  .adm { max-width: 1400px; display: grid; grid-template-columns: 218px minmax(0, 1fr); column-gap: 24px; align-items: start; }
+  .adm { max-width: 1400px; display: grid; grid-template-columns: 200px minmax(0, 1fr); column-gap: 20px; align-items: start; }
   .adm > * { grid-column: 2; min-width: 0; } .adm > style { display: none; }
   .adm > .adm-top { grid-column: 1 / -1; }
   .adm > .adm-tabs { grid-column: 1; grid-row: 2 / span 40; flex-direction: column; width: 100%; position: sticky; top: 84px; gap: 2px; margin: 0; }
@@ -25,8 +25,9 @@
 .adm-stat::after { content: ""; position: absolute; right: -30px; top: -30px; width: 100px; height: 100px; border-radius: 50%; background: radial-gradient(circle, rgba(124,108,240,.22), transparent 70%); pointer-events: none; }
 .adm-stat:hover { transform: translateY(-3px); border-color: rgba(167,139,250,.4); }
 .adm-stat b { font-size: 30px; letter-spacing: -.03em; font-family: var(--font-display); position: relative; z-index: 1; } .adm-stat span { opacity: .85; font-size: 13px; position: relative; z-index: 1; } .adm-stat small { opacity: .6; position: relative; z-index: 1; }
-.adm-table { width: 100%; border-collapse: separate; border-spacing: 0; font-size: 14px; }
-.adm-table th, .adm-table td { text-align: left; padding: 11px 12px; border-bottom: 1px solid var(--line); vertical-align: top; }
+.adm-table { width: 100%; border-collapse: separate; border-spacing: 0; font-size: 13.5px; }
+.adm-table th { white-space: nowrap; } .adm-table .adm-pill { white-space: nowrap; margin-left: 2px; } .adm-table td:not(:first-child):not(:nth-child(2)) { white-space: nowrap; }
+.adm-table th, .adm-table td { text-align: left; padding: 11px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
 .adm-table th { font-size: 11.5px; text-transform: uppercase; letter-spacing: .07em; color: var(--muted); font-weight: 700; background: rgba(255,255,255,.025); position: sticky; top: 0; }
 .adm-table th:first-child { border-top-left-radius: 12px; } .adm-table th:last-child { border-top-right-radius: 12px; }
 .adm-table tbody tr { transition: background .12s; } .adm-table tbody tr:hover { background: rgba(255,255,255,.035); }
