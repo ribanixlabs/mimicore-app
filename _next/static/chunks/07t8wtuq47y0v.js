@@ -1,1 +1,0 @@
-(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,61664,s=>{"use strict";s.s(["SUPABASE_ANON_KEY",0,"sb_publishable_8hMHMiDcPDUqJx5iJ6u1zA_wvtsW4vg","SUPABASE_URL",0,"https://evhbtofegbkvmjagsuby.supabase.co","configured",0,!0])}]);
