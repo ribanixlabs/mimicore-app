@@ -6,10 +6,10 @@
 Live voice changer · instant voice cloning · trained voices · video dubbing · 28 free voice effects ·
 text-to-speech in 23 languages · soundboard. Your voice, your device, your cloud. Never ours.
 
-**[⬇ Download for Windows](https://ribanixlabs.github.io/mimicore-app/#download)** ·
-[Website](https://ribanixlabs.github.io/mimicore-app/) ·
+**[⬇ Download for Windows](https://mimicore.pages.dev/#download)** ·
+[Website](https://mimicore.pages.dev/) ·
 [User guide](#-user-guide) ·
-[Account & Pro](https://ribanixlabs.github.io/mimicore-app/account/) ·
+[Account & Pro](https://mimicore.pages.dev/account/) ·
 [Release notes](https://github.com/ribanixlabs/mimicore-app/releases) ·
 [Report a bug](https://github.com/ribanixlabs/mimicore-app/issues/new?template=support.yml)
 
@@ -74,7 +74,7 @@ Everything you need to go from download to talking, streaming and creating in an
 
 ## 1. Install and first start
 
-1. Download **Mimicore-setup.exe** from the [download page](https://ribanixlabs.github.io/mimicore-app/#download) (you agree to the terms there) and run it. It installs for your Windows user only and needs no admin rights.
+1. Download **Mimicore-setup.exe** from the [download page](https://mimicore.pages.dev/#download) (you agree to the terms there) and run it. It installs for your Windows user only and needs no admin rights.
 2. If Windows shows "Windows protected your PC", click **More info › Run anyway**. Mimicore is new and not yet code-signed; every update is still signed and verified by the app.
 3. The app shows no terms screen: you accept the terms once, on the download page, before the installer downloads. You must be 18 or older and clone only your own voice or voices you have permission to use.
 4. Pick what to install: **Instant voice cloning** (clone a voice from 10–20 seconds, 23 languages, also powers Speak and Dub) and **Trained voices (RVC)** (use voices you trained or imported, lowest delay). Mimicore chooses the model size that suits your PC (about 1 to 2 GB for instant cloning, 0.3 GB for trained voices), downloads it, then **tunes itself to your PC**: it runs both engines for a few seconds and stores what your PC can keep smooth. Strong PCs start at the best quality, weak PCs at a lighter but still good setting. Dubbing and Voice Training are optional add-ons later in Settings.
@@ -151,7 +151,7 @@ Training makes the most faithful copy of a voice from 10–30 minutes of clean r
   3. In the Colab tab, press **▶**, click **Run anyway**, and allow Google Drive access.
   4. Keep the Colab tab open. Mimicore shows the progress and installs the voice automatically when it's done. The recordings are then moved to your Drive trash, unless you chose to keep them.
 
-  You can also start cloud training from the [website](https://ribanixlabs.github.io/mimicore-app/train/).
+  You can also start cloud training from the [website](https://mimicore.pages.dev/train/).
 
 ### Import RVC voices
 **Import RVC voices…** adds existing RVC v2 voices (a folder with `.pth`/`.onnx` and `.index`) that you have the rights to use.
@@ -311,7 +311,7 @@ The **Support** tab (sign in first) is an assistant that knows the whole app and
 - Optional cloud training uses only **your own** Google Drive and Colab. Mimicore can see only the files it creates there.
 - The Support assistant sends what you type to our server and an AI provider; do not type passwords or payment details. Tickets (conversation plus a log you approve) are kept until you delete your account. We otherwise store only your account email and plan. Error reports are off unless you turn them on.
 - Clone only your own voice or voices you have permission to use. Never use a cloned voice to deceive, defraud or impersonate anyone. Generated files are marked as AI-generated.
-- Full texts: [Acceptable Use](https://ribanixlabs.github.io/mimicore-app/legal/acceptable-use/) · [License](https://ribanixlabs.github.io/mimicore-app/legal/eula/) · [Privacy](https://ribanixlabs.github.io/mimicore-app/legal/privacy/).
+- Full texts: [Acceptable Use](https://mimicore.pages.dev/legal/acceptable-use/) · [License](https://mimicore.pages.dev/legal/eula/) · [Privacy](https://mimicore.pages.dev/legal/privacy/).
 
 ---
 
