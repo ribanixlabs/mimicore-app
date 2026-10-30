@@ -141,8 +141,8 @@ def load_synth(pth):
     cpt["config"][-3] = cpt["weight"]["emb_g.weight"].shape[0]
     version, use_f0 = cpt.get("version", "v1"), cpt.get("f0", 1)
     vocoder = cpt.get("vocoder", "HiFi-GAN")
-    if version != "v2" or not use_f0 or vocoder != "HiFi-GAN":
-        raise ValueError(f"Only RVC v2 pitch-guided HiFi-GAN voices are supported "
+    if version != "v2" or not use_f0 or vocoder not in ("HiFi-GAN", "MRF HiFi-GAN"):
+        raise ValueError(f"Only RVC v2 pitch-guided voices with the HiFi-GAN or MRF HiFi-GAN vocoder are supported "
                          f"(this one: {version}, f0={use_f0}, {vocoder}).")
     net = Synthesizer(*cpt["config"], use_f0=use_f0, text_enc_hidden_dim=768, vocoder=vocoder)
     net.load_state_dict(cpt["weight"], strict=False)

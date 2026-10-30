@@ -3,7 +3,7 @@ the Mimicore app (src-tauri/src/trainer.rs) with cwd = <pack>/applio.
 
     python mimicore_train.py --name NAME --dataset DIR --runs DIR --out DIR --epochs 250 --batch 8 [--tools DIR]
 
-Steps (same as VoiceMimicry's TrainJob): slice/clean audio -> ContentVec + RMVPE features -> train from the TITAN 48 kHz
+Steps (same as Mimicore's TrainJob): slice/clean audio -> ContentVec + RMVPE features -> train from the TITAN 48 kHz
 base model -> faiss index -> export voice.onnx / index.npy / meta.json into --out (Mimicore's RVC voice format).
 Progress for the app: lines starting with "@@" + JSON ({"step": n, "of": 5, "label": ...}, {"epoch": n}, {"done": dir}).
 Re-running with the same --name continues from the last checkpoint.
@@ -119,7 +119,20 @@ def main():
 
     runs = Path(a.runs).resolve()
     run_dir = runs / a.name
-    os.environ["APPLIO_LOGS_ROOT"] = str(runs)  # Applio writes the run (checkpoints, logs) here
+    # Where Applio reads/writes. APPLIO_LOGS_ROOT covers Applio up to 3.6.5 (train.py patch); 3.6.6+ moved to
+    # APPLIO_LOGS_DIR (per-user config), APPLIO_CODE_ROOT tells it where the shipped logs/mute templates live, and
+    # APPLIO_CONFIG_FILE keeps it out of the user's %APPDATA% (read-only/packed install): all four coords, only.
+    applio = Path.cwd()
+    os.environ["APPLIO_LOGS_ROOT"] = str(runs)
+    os.environ["APPLIO_LOGS_DIR"] = str(runs)
+    os.environ["APPLIO_CODE_ROOT"] = str(applio)
+    os.environ["APPLIO_CONFIG_FILE"] = str(applio / "assets" / "config.json")
+    cfg = applio / "assets" / "config.json"
+    if not cfg.exists():  # else training falls back to fp32 precision (twice as slow); same as the Colab notebook
+        tpl = applio / "assets" / "config_template.json"
+        if tpl.exists():
+            cfg.write_text(tpl.read_text(encoding="utf-8", errors="replace"), encoding="utf-8")
+            print(f"wrote {cfg.name} from the template")
     g, d = TITAN / "G-f048k-TITAN-Medium.pth", TITAN / "D-f048k-TITAN-Medium.pth"
     if not (g.exists() and d.exists()):
         raise SystemExit("The base model files are missing from the Training Pack - reinstall it.")
