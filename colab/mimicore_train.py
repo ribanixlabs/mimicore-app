@@ -182,6 +182,11 @@ def main():
     step(1)
     run(["rvc/train/preprocess/preprocess.py", run_dir, Path(a.dataset).resolve(), SR, cores, "Automatic", True, False,
          0.5, 3.0, 0.3, "pre"])
+    sliced_dir = run_dir / "sliced_audios"
+    sliced_files = list(sliced_dir.glob("*.wav")) if sliced_dir.is_dir() else []
+    if not sliced_files:
+        raise SystemExit("Preprocessing produced no sliced audio files. Make sure the dataset audio recordings are valid, "
+                         "contain audible speech, and are not locked by another program.")
     step(2)
     run(["rvc/train/extract/extract.py", run_dir, "rmvpe", cores, "0", SR, "contentvec", "None", "2"])
     step(3)
