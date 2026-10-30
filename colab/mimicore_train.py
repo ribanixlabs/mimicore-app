@@ -20,6 +20,11 @@ from pathlib import Path
 NO_WINDOW = 0x08000000 if os.name == "nt" else 0  # Windows: no console window; Linux (Colab cloud training): unused
 SR = 48000
 TITAN = Path("rvc/models/pretraineds/custom/TITAN_Medium_recommended_for_speech")
+# Official RVC v2 pretrained base (IAHispano/Applio Resources, public): the TITAN medium base is fine-tuned from it,
+# so the run stays compatible (same architecture, same 48 kHz). ~220 MB in total, downloaded once and cached.
+RVC_V2 = ("f0G48k.pth", "f0D48k.pth",
+          "https://huggingface.co/IAHispano/Applio/resolve/main/Resources/pretrained_v2/{}/?download=true",
+          [75465569, 142875703])
 STEPS = ["Cleaning & slicing audio", "Extracting voice features", "Training", "Building voice index", "Exporting voice"]
 
 
@@ -112,6 +117,8 @@ def main():
     ap.add_argument("--epochs", type=int, default=250)
     ap.add_argument("--batch", type=int, default=8)
     ap.add_argument("--save-every", type=int, default=0)  # 0 = about 20 checkpoints per run
+    ap.add_argument("--basis", choices=["titan", "rvcv2"], default="titan")  # base model to fine-tune from
+    ap.add_argument("--bases-dir", default=str(Path.cwd() / "rvc" / "models" / "pretraineds" / "custom"))
     ap.add_argument("--tools", default=str(Path(sys.executable).resolve().parent.parent / "tools"))
     a = ap.parse_args()
     if a.save_every <= 0:
@@ -133,9 +140,36 @@ def main():
         if tpl.exists():
             cfg.write_text(tpl.read_text(encoding="utf-8", errors="replace"), encoding="utf-8")
             print(f"wrote {cfg.name} from the template")
-    g, d = TITAN / "G-f048k-TITAN-Medium.pth", TITAN / "D-f048k-TITAN-Medium.pth"
-    if not (g.exists() and d.exists()):
-        raise SystemExit("The base model files are missing from the Training Pack - reinstall it.")
+    bases = Path(a.bases_dir).resolve()
+    if a.basis == "rvcv2":
+        g, d = bases / RVC_V2[0], bases / RVC_V2[1]
+        if not (g.exists() and d.exists()):
+            bases.mkdir(parents=True, exist_ok=True)
+            import urllib.request
+
+            print("Downloading the official RVC v2 base (about 220 MB, once)...", flush=True)
+            for f, size in zip(RVC_V2[:2], RVC_V2[3]):
+                dst = bases / f
+                if not dst.exists():
+                    url = RVC_V2[2].format(f)
+                    part = dst.with_name(dst.name + ".part")
+                    with urllib.request.urlopen(url) as r, open(part, "wb") as out:
+                        got, total = 0, int(r.headers.get("Content-Length") or size)
+                        while True:
+                            chunk = r.read(1 << 20)
+                            if not chunk:
+                                break
+                            got += len(chunk)
+                            out.write(chunk)
+                            print(f"@@ {{\"label\": \"Downloading {f}: {got / 1e6:.0f} of {total / 1e6:.0f} MB\"}}", flush=True)
+                    if abs(part.stat().st_size - total) > 4096:
+                        part.unlink()
+                        raise SystemExit(f"Download of {f} is incomplete; try again.")
+                    part.rename(dst)
+    else:
+        g, d = TITAN / "G-f048k-TITAN-Medium.pth", TITAN / "D-f048k-TITAN-Medium.pth"
+        if not (g.exists() and d.exists()):
+            raise SystemExit("The base model files are missing from the Training Pack - reinstall it.")
     if run_dir.exists():
         # Continuing: keep learned weights (G_/D_, checkpoints) but rebuild everything derived from the recordings.
         for sub in ("sliced_audios", "sliced_audios_16k", "f0", "f0_voiced", "extracted"):
@@ -174,7 +208,8 @@ def main():
 
     onnx_export.export_voice(out, "fp16", out / pth.name)
     meta = json.loads((out / "meta.json").read_text())
-    meta.update(source="mimicore-trainer", version="v2", epochs=best_epoch, trained_epochs=cps[-1][0])
+    meta.update(source="mimicore-trainer", version="v2", epochs=best_epoch, trained_epochs=cps[-1][0],
+                base="rvc_v2_official" if a.basis == "rvcv2" else "titan_medium")
     try:  # median pitch of the recordings: lets the app pitch-match text-to-speech for this voice
         import numpy as np
 
