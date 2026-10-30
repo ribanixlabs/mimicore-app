@@ -6,10 +6,10 @@
 Live voice changer · instant voice cloning · trained voices · video dubbing · 28 free voice effects ·
 text-to-speech in 23 languages · soundboard. Your voice, your device, your cloud. Never ours.
 
-**[⬇ Download for Windows](https://mimicore.pages.dev/#download)** ·
+**[⬇ Download for Windows](https://mimicore.pages.dev/#download)** · **[Microsoft Store](https://apps.microsoft.com/detail/9P58T0P2DJJJ)** ·
 [Website](https://mimicore.pages.dev/) ·
 [User guide](#-user-guide) ·
-[Account & Pro](https://mimicore.pages.dev/account/) ·
+[Account & plans](https://mimicore.pages.dev/account/) ·
 [Release notes](https://github.com/ribanixlabs/mimicore-app/releases) ·
 [Report a bug](https://github.com/ribanixlabs/mimicore-app/issues/new?template=support.yml)
 
@@ -19,7 +19,7 @@ text-to-speech in 23 languages · soundboard. Your voice, your device, your clou
 
 | | |
 |---|---|
-| 🎙️ **Live voice changer** | Talk in any voice in Discord, Zoom, OBS and games. Trained voices are auto-tuned to your PC (about 0.3 s delay). One-click virtual microphone setup. |
+| 🎙️ **Live voice changer** | Talk in any voice in Discord, Zoom, OBS and games. Trained voices run at their best quality, picked automatically for your PC (about 0.7 s delay). One-click virtual microphone setup. |
 | ⚡ **Instant voice cloning** | A new voice from 10–20 seconds of speech. Background noise is removed automatically. |
 | 🧠 **Train your own voice** | The closest likeness, from 10–30 minutes of recordings. Train on your NVIDIA GPU or **free in the cloud** in your own Google account. Same trainer, same quality. |
 | 🎯 **Calibrate to your voice** | Read one sentence and Mimicore matches a trained voice's pitch and noise gate to you. The settings are remembered per voice. |
@@ -35,23 +35,22 @@ text-to-speech in 23 languages · soundboard. Your voice, your device, your clou
 
 ## Plans
 
-**Free trial:** 7 days of Live or Studio. A refundable INR 2 / USD 1 charge verifies your payment method, billing starts after the trial, and you can cancel any time before it ends and pay nothing.
+**Free start:** new accounts in India get 30 days of Studio with no card, and outside India the Early Bird Gift gives Studio free while international payments are being set up; then the Free plan stays free forever; a first purchase of Studio also has a **7-day free trial**. A small refundable charge verifies your payment method, billing starts after the trial, and you can cancel any time before it ends and pay nothing.
 
-**Free:** 20 minutes of live voice a day, built-in and gallery voices, all 28 effects and the soundboard (no limits), and short
-Speak / Dub clips (30 s).
+**Free (forever):** all 28 effects and the soundboard (no limits), hotkeys and push-to-talk, unlimited live AI voice with the 19 gallery
+voices, 60 minutes a day with your own voice, one voice clone of your own, Speak clips up to 3 minutes, and Dub and file-conversion
+clips up to 2 minutes. It runs on your PC, so the free plan can be this generous.
 
-**Live** (voice changer): unlimited live voice changing with built-in and gallery voices. $3.99/month, $29.99/year or $49
-lifetime (₹99 / ₹699 / ₹1,499 in India).
-
-**Studio** (everything): your own voices live, cloning, mixing, importing, training, Speak and Dub, all unlimited. $6.99/month,
-$49.99/year or $89 lifetime (₹149 / ₹999 / ₹2,999 in India). Secure payments by Razorpay.
+**Studio** (everything else): your own voices live with no daily limit, unlimited cloning, mixing, importing and training, and Speak, Dub and
+file conversion with no clip limit. Monthly, annual and lifetime options at a low price, shown in your local currency on the
+[website](https://mimicore.pages.dev/#pricing). Secure payments by Razorpay.
 
 ## Requirements
 
 - Windows 10/11, 64-bit.
 - A DirectX 12 graphics card is recommended (NVIDIA, AMD or Intel). Effects run on any PC.
 - Training on your PC needs an NVIDIA GTX 16 / RTX 20 series card or newer with 4 GB+. Any PC can train in the cloud.
-- Pick a quality tier on first run: Fast 1.1 GB, Balanced 1.3 GB or Studio 1.8 GB. The Dubbing add-on is 3.2 GB.
+- On first run Mimicore picks the voice model that fits your PC automatically (Fast 1.1 GB, Balanced 1.3 GB or Ultra 1.8 GB). The Dubbing add-on is 3.2 GB.
 - The app updates itself.
 
 # 📖 User guide
@@ -69,8 +68,9 @@ Everything you need to go from download to talking, streaming and creating in an
 - [9. Hotkeys and push-to-talk](#9-hotkeys-and-push-to-talk)
 - [10. Settings](#10-settings)
 - [11. Use cases: step-by-step recipes](#11-use-cases-step-by-step-recipes)
-- [12. Troubleshooting](#12-troubleshooting)
-- [13. Privacy and responsible use](#13-privacy-and-responsible-use)
+- [12. Support](#12-support)
+- [13. Troubleshooting](#13-troubleshooting)
+- [14. Privacy and responsible use](#14-privacy-and-responsible-use)
 
 ## 1. Install and first start
 
@@ -78,7 +78,7 @@ Everything you need to go from download to talking, streaming and creating in an
 2. If Windows shows "Windows protected your PC", click **More info › Run anyway**. Mimicore is new and not yet code-signed; every update is still signed and verified by the app.
 3. The app shows no terms screen: you accept the terms once, on the download page, before the installer downloads. You must be 18 or older and clone only your own voice or voices you have permission to use.
 4. Pick what to install: **Instant voice cloning** (clone a voice from 10–20 seconds, 23 languages, also powers Speak and Dub) and **Trained voices (RVC)** (use voices you trained or imported, lowest delay). Mimicore chooses the model size that suits your PC (about 1 to 2 GB for instant cloning, 0.3 GB for trained voices), downloads it, then **tunes itself to your PC**: it runs both engines for a few seconds and stores what your PC can keep smooth. Strong PCs start at the best quality, weak PCs at a lighter but still good setting. Dubbing and Voice Training are optional add-ons later in Settings.
-5. **Sign in** with Google, Discord or email. It is free: 20 minutes of live voice every day. To try Live or Studio, start a 7-day free trial from your account page (a refundable INR 2 / USD 1 check of your payment method; billing starts after the trial; cancel any time before).
+5. **Sign in** with Google, Discord or email. It is free: new accounts get 30 days of Studio free (India) or an Early Bird Gift with full Studio access (Global), with no card needed. Afterward you keep the Free plan (all 28 effects, the soundboard and 60 minutes of live AI voice every day with your own voice, plus short Speak, Dub and conversion clips) or choose Studio on your account page.
 6. A tour of every page (Live, Speak, Dub, Voices, Soundboard, Support, Settings) shows where everything is. After each update that changes the interface, a short **What's new** tour shows only what changed. Press Esc to skip a tour. The 28 voice effects work right away, even before a model finishes downloading.
 
 ## 2. Set up the virtual microphone
@@ -98,18 +98,9 @@ The virtual microphone lets Discord, Zoom, OBS and games hear your changed voice
 
 1. On **Live**, pick a voice or effect from the list and press the big **Start** button.
 2. Speak. The status line shows the **delay**, the processing time per block and any **glitches**.
-3. Instant voices have a **Quality** switch. **Auto** (the default) uses what the benchmark found and keeps adjusting while you talk; the manual choices are below:
-   - **Lite** (about 0.5 to 1.4 s, adapts to your PC): for slower PCs and integrated graphics. It is selected automatically on a PC without a graphics card of 3 GB or more, and Mimicore steps down to a lighter quality by itself if the voice cannot keep up.
-   - **Low** (about 0.35 s): quickest reaction, for gaming. Drawback: a slightly less polished sound.
-   - **Medium** (about 0.45 s): a good balance of reaction and quality.
-   - **High** (about 0.5 s): most natural and stable, for streams and recordings. Drawback: the highest delay of the three.
-4. Trained voices have the same **Quality** switch:
-   - **Auto**: tuned to your PC for the lowest delay it can sustain (about 0.3 s on a mid-range GPU). Drawback: the delay can change a little when it adjusts.
-   - **Low** (about 0.3 s): the lowest delay, great for gaming and calls. Drawback: the most work for your PC, so it can stutter on a busy or weak one.
-   - **Medium** (about 0.5 s): balanced, steadier with less load. Drawback: a slower reaction than Low.
-   - **High** (about 0.7 s): the smoothest and most stable sound with the least load on your PC, good for streaming and recording. Drawback: the highest delay.
-5. **Self-healing:** while you talk, Mimicore watches how long each block takes and whether the sound glitches. If your PC cannot keep up (a game starts, the laptop throttles) it moves to a lighter setting within seconds and says so; after a long calm stretch it moves back up. The **Live engine** panel under the stage shows it live: block time against block length, **CPU** (the main load of instant voices) and **GPU** (the main load of trained voices), video memory, glitches, delay, the current step and how often it adjusted.
-6. **Tune for this PC** (Settings › Add-ons) re-runs the benchmark any time: after a hardware or driver change, or if a voice stutters. **Thorough test** measures more steps. Stop the live voice first.
+3. **Quality is automatic.** There is no quality switch to set. Trained voices run in 400 ms blocks, the best-sounding setting, with about 0.7 s of delay; instant voices use their best setting too. Mimicore runs on your best graphics card (NVIDIA, AMD or Intel) and on the CPU when there is none, and it measures your PC once in the background after you install an add-on. A PC that cannot run the best setting smoothly gets the longest-block setting it can sustain, so the sound stays clean.
+4. **If a voice stutters:** close other programs that use the graphics card (games, video editors, browsers with video) and use wired headphones (Bluetooth adds its own delay). You can also switch on **Settings › General › Processing › Lower the quality automatically if my PC struggles**. It is off by default and not recommended, because it trades sound quality for stability: it steps down to a lighter setting within seconds when your PC cannot keep up and steps back up after a calm stretch.
+5. The **Live engine** panel under the stage shows what the engine is doing right now: block time against block length, **CPU**, **GPU**, video memory, glitches and the delay.
 
 Controls on the Live page:
 - **Mute** silences your microphone without stopping the voice, so unmuting is instant.
@@ -121,7 +112,7 @@ Controls on the Live page:
 - **Voice tuning** (trained voices only) has **Pitch** (in semitones; +12 is one octave up) and **Voice strength** (how strongly the sound is pulled toward the trained voice). Both apply instantly.
 - **🎯 Calibrate to my voice** (trained voices only): read one sentence and Mimicore measures your pitch and your room. It then sets the pitch and noise gate for the closest match. The settings are saved for that voice and load whenever you pick it.
 
-If the status shows **Struggling**, your PC can't keep up right now. Mimicore lowers the setting by itself; you can also close other programs that use the graphics card or run **Tune for this PC** again.
+If the status shows **Struggling**, your PC can't keep up right now. close other programs that use the graphics card, or switch on **Lower the quality automatically if my PC struggles** in Settings › General › Processing (off by default, not recommended).
 
 ## 4. Your voices
 
@@ -222,17 +213,16 @@ Settings has six tabs: **Account**, **Hotkeys**, **Add-ons**, **General** (theme
 
 - **Add-ons** are optional downloads, each with a "why" and a "skip it if":
   - **Live voice engines:** **Instant voice cloning** (powers Speak, instant cloning and live conversion of a cloned voice; Mimicore picks the model size for your PC) and **Trained voices (RVC)** (0.3 GB, runs trained or imported voices live). "Advanced: model tiers" lists the Fast, Balanced and Ultra model files for people who want to manage them.
-  - **Tune for this PC:** your hardware class, what the benchmark chose for each engine, a **Run benchmark** and a **Thorough test** button and a table of the last test.
+  - **Processing:** run on the automatically chosen best graphics card (or the CPU when there is none), or pick one yourself; the optional **Lower the quality automatically if my PC struggles** switch (off by default, not recommended).
   - **Voice training** (2.5 GB, NVIDIA only) lets this PC train RVC voices. No NVIDIA card? Use free cloud training instead.
   - **Video dubbing** (about 3 GB): translates a video's speech into your voice in another language, offline.
   - **Cloud training** (optional): connect your Google Drive to train on a free Google GPU.
-- **Account:** your plan (Free, Live, Studio or Studio Lifetime, with a "trial" tag during a free trial), **See plans**, sign out.
-  - Free plan: 20 live minutes a day, short Speak / Dub / conversion clips (30 s), no cloning, mixing, importing or training.
+- **Account:** your plan (Free or Studio, with a "trial" tag during a free trial), **See plans**, sign out.
+  - Free plan: all 28 effects and the soundboard, unlimited live AI voice with the 19 gallery voices, 60 minutes a day with your own voices, one voice clone, Speak clips up to 3 minutes (about 2,700 characters), Dub and conversion clips up to 2 minutes; no mixing, importing or training.
   - Always free: effects, the soundboard, the gallery and built-in voices.
-  - Live (monthly, annual or lifetime): unlimited live voice changing with built-in and gallery voices.
   - Studio (monthly, annual or lifetime): everything unlimited, including your own voices live, cloning, mixing, importing, training, Speak and Dub.
 - **Hotkeys:** see section 9.
-- **Models & add-ons:** the two live engines, the PC benchmark, Voice Training and Dubbing.
+- **Models & add-ons:** the two live engines, Voice Training and Dubbing. Mimicore measures your PC by itself in the background.
 - **Appearance & language:** dark, light or match Windows. The interface is available in English, हिन्दी, Español, Português, Français, Deutsch, Русский, 日本語 and Bahasa Indonesia.
 - **Updates:** Mimicore checks automatically and can download updates in the background. You choose when to restart.
 - **Processing:** pick the graphics card. Any DirectX 12 card works: NVIDIA, AMD or Intel.
@@ -243,7 +233,7 @@ Settings has six tabs: **Account**, **Hotkeys**, **Add-ons**, **General** (theme
 
 ### Gaming with friends on Discord
 1. Set up the virtual mic (section 2) and select **CABLE Output** in Discord.
-2. Pick a voice (an instant voice on **Low** quality, a trained voice, or an effect) and press **Start**.
+2. Pick a voice (an instant voice, a trained voice, or an effect) and press **Start** - quality is chosen automatically for your PC.
 3. Set a **Push-to-talk** key and a **Start / stop** hotkey.
 4. Add soundboard clips with hotkeys for instant reactions.
 
@@ -293,16 +283,16 @@ The **Support** tab (sign in first) is an assistant that knows the whole app and
 |---|---|
 | Others can't hear me | Check that the voice is started, the **Output › Virtual mic** isn't Off, and the other app's microphone is **CABLE Output**. |
 | I hear an echo or howling | Use headphones, or turn off **Hear myself**. |
-| The voice sounds robotic or glitchy | Mimicore lowers the setting by itself. Also close other apps that use the graphics card, run **Tune for this PC** in Settings › Add-ons, and check that Settings › General › Processing uses your best card. |
-| Too much delay | Use **Low** quality; trained voices have the lowest delay. Bluetooth headsets add their own delay, so wired is better. |
+| The voice sounds robotic or glitchy | Close other apps that use the graphics card, use a wired headset, and check that Settings › General › Processing uses your best card. |
+| Too much delay | Close programs that use the graphics card; trained voices trade a little delay for likeness. Bluetooth headsets add their own delay, so wired is better. |
 | My mic is too quiet | Keep **Automatic level** on, or raise the mic level in Windows sound settings. **Calibrate** shows warnings for quiet or clipping mics. |
 | Keyboard or fan noise comes through | Turn on **Noise suppression** and set the **Noise gate** to Medium. |
 | Training is greyed out | Training on the PC needs an NVIDIA card. Use **Cloud (free)** instead. |
 | Colab says no GPU is available | Free GPUs are limited at busy times. Try again later; training continues from the last checkpoint. |
 | The virtual mic doesn't appear | Restart Windows after the VB-CABLE install, then open Mimicore again. |
-| "Used today's free live minutes" | Free live minutes refill every day. Live or Studio removes the limit. |
-| "This PC isn't linked to your Studio plan" | Studio works on up to 2 PCs. Open Settings › Account › Your PCs (or the website account page), remove a PC you no longer use, then press Refresh. A removed PC can't be used with the account again. |
-| "…is part of Studio" | Cloning, mixing, importing, training and long Speak / Dub clips need Studio (or a Studio free trial, start it on your account page). |
+| "Used today's free live minutes" | Free live minutes (60 a day) refill every day. Studio removes the limit. |
+| "Account in use on another PC" | Paid plans can be used on all your PCs, with 1 active PC at a time. Starting on a new PC takes priority and pauses the previous PC. |
+| "…is part of Studio" | More than one instant voice, mixing, importing, training and long Speak / Dub clips need Studio (or a Studio free trial, start it on your account page). |
 | Something else | Ask the **Support** tab: it answers or opens a ticket for you. Or Settings › Your data › **Copy support info** copies versions, graphics card, key settings and the last log lines (no personal data) to paste into your message. **Open data folder** has the full logs (`logs\mimicore.log`). The support email is on the website's contact page. |
 
 ## 14. Privacy and responsible use
@@ -316,4 +306,4 @@ The **Support** tab (sign in first) is an assistant that knows the whole app and
 ---
 
 This repository hosts releases, automatic updates, model downloads, the open cloud-training notebook
-([`colab/`](colab/)) and support for Mimicore. The app's source code is private. Support: ribanixlabs@zohomail.in
+([`colab/`](colab/)) and support for Mimicore. The app's source code is private. Support: ribanixlabs@gmail.com
