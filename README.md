@@ -19,12 +19,13 @@ text-to-speech in 23 languages · soundboard. Your voice, your device, your clou
 
 | | |
 |---|---|
-| 🎙️ **Live voice changer** | Talk in any voice in Discord, Zoom, OBS and games. Trained voices run at their best quality, picked automatically for your PC (about 0.7 s delay). One-click virtual microphone setup. |
+| 🎙️ **Live voice changer** | Talk in any voice in Discord, Zoom, OBS and games. One Latency and quality slider for trained voices (15 positions, about 80 ms to 1.2 s of buffering); actual delay depends on the slider position, the voice and your PC. One-click virtual microphone setup. |
 | ⚡ **Instant voice cloning** | A new voice from 10–20 seconds of speech. Background noise is removed automatically. |
 | 🧠 **Train your own voice** | The closest likeness, from 10–30 minutes of recordings. Train on your NVIDIA GPU or **free in the cloud** in your own Google account. Same trainer, same quality. |
 | 🎯 **Calibrate to your voice** | Read one sentence and Mimicore matches a trained voice's pitch and noise gate to you. The settings are remembered per voice. |
 | 🎬 **Dub a video** | Turn a video's speech into another language in your own voice, fully offline. You get a timed WAV track and SRT subtitles. |
-| 🗣️ **Text to speech** | Speak typed text live into calls or save it to files, in any of your voices. 23 languages and emotion control. |
+| 🗣️ **Text to speech** | Speak typed text live into calls or save it to files, in any of your voices. 23 languages, emotion and speed control, and optional accent matching for trained voices. |
+| 📚 **Audiobook Studio and projects** | Import PDF, Word or scanned pages, split into chapters and render them. Scripts are saved on your PC as projects and an interrupted render resumes. |
 | 🖼️ **Voice gallery and mixer** | 19 original ready-made voices, or blend two voices into a new one that's yours alone. |
 | 🎛️ **28 voice effects** | Robot, demon, chipmunk, radio, cave and more. Free and instant on any PC; you can layer them on any voice. |
 | 🔊 **Soundboard** | Built-in sounds plus your own clips, played straight into your mic. |
@@ -50,19 +51,19 @@ file conversion with no clip limit. Monthly, annual and lifetime options at a lo
 - Windows 10/11, 64-bit.
 - A DirectX 12 graphics card is recommended (NVIDIA, AMD or Intel). Effects run on any PC.
 - Training on your PC needs an NVIDIA GTX 16 / RTX 20 series card or newer with 4 GB+. Any PC can train in the cloud.
-- On first run Mimicore picks the voice model that fits your PC automatically (Fast 1.1 GB, Balanced 1.3 GB or Ultra 1.8 GB). The Dubbing add-on is 3.2 GB.
+- Guided setup downloads only what your chosen task needs; Settings > Add-ons lists the Fast, Balanced and Ultra voice engine sizes (Mimicore picks one for your PC). The latency slider is separate from these sizes. The Dubbing add-on is 3.2 GB.
 - The app updates itself.
 
 # 📖 User guide
 
-Everything you need to go from download to talking, streaming and creating in any voice.
+Everything you need to go from download to talking, streaming and creating in any voice. This guide describes Mimicore 2.9.
 
 - [1. Install and first start](#1-install-and-first-start)
 - [2. Set up the virtual microphone](#2-set-up-the-virtual-microphone)
 - [3. Go live](#3-go-live)
 - [4. Your voices](#4-your-voices)
 - [5. Voice effects](#5-voice-effects)
-- [6. Speak: text to speech](#6-speak-text-to-speech)
+- [6. Speak: text to speech and Audiobook Studio](#6-speak-text-to-speech-and-audiobook-studio)
 - [7. Dub a video](#7-dub-a-video)
 - [8. Soundboard](#8-soundboard)
 - [9. Hotkeys and push-to-talk](#9-hotkeys-and-push-to-talk)
@@ -77,7 +78,7 @@ Everything you need to go from download to talking, streaming and creating in an
 1. Download **Mimicore-setup.exe** from the [download page](https://mimicore.pages.dev/#download) (you agree to the terms there) and run it. It installs for your Windows user only and needs no admin rights.
 2. If Windows shows "Windows protected your PC", click **More info › Run anyway**. Mimicore is new and not yet code-signed; every update is still signed and verified by the app.
 3. The app shows no terms screen: you accept the terms once, on the download page, before the installer downloads. You must be 18 or older and clone only your own voice or voices you have permission to use.
-4. Pick what to install: **Instant voice cloning** (clone a voice from 10–20 seconds, 23 languages, also powers Speak and Dub) and **Trained voices (RVC)** (use voices you trained or imported, lowest delay). Mimicore chooses the model size that suits your PC (about 1 to 2 GB for instant cloning, 0.3 GB for trained voices), downloads it, then **tunes itself to your PC**: it runs both engines for a few seconds and stores what your PC can keep smooth. Strong PCs start at the best quality, weak PCs at a lighter but still good setting. Dubbing and Voice Training are optional add-ons later in Settings.
+4. Choose a task in guided setup (Live, voiceover or Dub) and download only its prerequisites; the guide marks the task done when you have a real result. You can skip it and use the full menu. Instant voice cloning also powers Speak; trained voices use RVC. Model downloads are explicit and no background performance test runs. Optional Dubbing and Voice Training add-ons live in Settings.
 5. **Sign in** with Google, Discord or email. It is free: new accounts get 30 days of Studio free (India) or an Early Bird Gift with full Studio access (Global), with no card needed. Afterward you keep the Free plan (all 28 effects, the soundboard and 60 minutes of live AI voice every day with your own voice, plus short Speak, Dub and conversion clips) or choose Studio on your account page.
 6. A tour of every page (Live, Speak, Dub, Voices, Soundboard, Support, Settings) shows where everything is. After each update that changes the interface, a short **What's new** tour shows only what changed. Press Esc to skip a tour. The 28 voice effects work right away, even before a model finishes downloading.
 
@@ -97,10 +98,11 @@ The virtual microphone lets Discord, Zoom, OBS and games hear your changed voice
 ## 3. Go live
 
 1. On **Live**, pick a voice or effect from the list and press the big **Start** button.
-2. Speak. The status line shows the **delay**, the processing time per block and any **glitches**.
-3. **Quality is automatic.** There is no quality switch to set. Trained voices run in 400 ms blocks, the best-sounding setting, with about 0.7 s of delay; instant voices use their best setting too. Mimicore runs on your best graphics card (NVIDIA, AMD or Intel) and on the CPU when there is none, and it measures your PC once in the background after you install an add-on. A PC that cannot run the best setting smoothly gets the longest-block setting it can sustain, so the sound stays clean.
-4. **If a voice stutters:** close other programs that use the graphics card (games, video editors, browsers with video) and use wired headphones (Bluetooth adds its own delay). You can also switch on **Settings › General › Processing › Lower the quality automatically if my PC struggles**. It is off by default and not recommended, because it trades sound quality for stability: it steps down to a lighter setting within seconds when your PC cannot keep up and steps back up after a calm stretch.
-5. The **Live engine** panel under the stage shows what the engine is doing right now: block time against block length, **CPU**, **GPU**, video memory, glitches and the delay.
+2. Speak. The status line shows estimated local **delay** and any **glitches**; the engine panel shows processing time.
+3. **Adjust latency and quality before starting:** on a trained voice, use the slider just below the voice name. Left reduces buffering with more frequent processing and less context; right favours smoothness and quality and adds delay you will hear. There are 15 positions, from about 80 ms to 1.2 s of buffering in 80 ms steps; keep it toward the left for calls and games and use the right-hand end only for streams or recordings where delay does not matter. Stop Live before adjusting; your choice stays fixed. Instant voices and effects have no slider. Actual delay and smoothness depend on the voice, audio devices and PC.
+   - **Faster, slightly less accurate** (a switch under the slider, off by default): matches your voice against a smaller part of its training data so each block finishes sooner on a slow or busy graphics card. It never turns on by itself; turn it off to get exactly the normal behaviour. It applies the next time you press Start.
+4. **If Live struggles:** the status line and the Live engine panel compare processing time with the block length. Stop, move the slider to a different position, try **Faster**, close graphics-heavy apps (games, video editors) and use wired audio; on a laptop, plug in the charger. Low GPU use does not prove that audio deadlines are being met. If a notice says your graphics card is too busy, it shows at most once every 15 minutes and goes away by itself: it only suggests what to try and never changes the slider. Use a free effect if no AI voice is smooth on your PC. On the longer positions Mimicore keeps a larger output buffer and a small background job that stops the graphics card from slowing down between blocks; it uses a little extra graphics memory while Live runs (start Mimicore with the environment variable `MIMICORE_NO_KEEPALIVE=1` if you prefer the card to rest).
+5. The **Live engine** panel under the stage shows what the engine is doing right now: processing time, **CPU**, **GPU**, video memory, glitches and the delay.
 
 Controls on the Live page:
 - **Mute** silences your microphone without stopping the voice, so unmuting is instant.
@@ -111,8 +113,6 @@ Controls on the Live page:
 - **Noise gate** (Off / Light / Medium / Strong) silences everything between your words: keyboard, fan, breathing.
 - **Voice tuning** (trained voices only) has **Pitch** (in semitones; +12 is one octave up) and **Voice strength** (how strongly the sound is pulled toward the trained voice). Both apply instantly.
 - **🎯 Calibrate to my voice** (trained voices only): read one sentence and Mimicore measures your pitch and your room. It then sets the pitch and noise gate for the closest match. The settings are saved for that voice and load whenever you pick it.
-
-If the status shows **Struggling**, your PC can't keep up right now. close other programs that use the graphics card, or switch on **Lower the quality automatically if my PC struggles** in Settings › General › Processing (off by default, not recommended).
 
 ## 4. Your voices
 
@@ -132,7 +132,7 @@ Click **Get the voice gallery (27 MB)** once, then press ▶ to hear the voices 
 ### Train a voice (closest likeness)
 Training makes the most faithful copy of a voice from 10–30 minutes of clean recordings of one person.
 
-- **On this PC** needs an NVIDIA graphics card (GTX 16 / RTX 20 series or newer, 4 GB+). Install the **Voice Training** add-on when asked, add your recordings, choose a quality and click **Start training**:
+- **On this PC** needs an NVIDIA graphics card (GTX 16 / RTX 20 series or newer, 4 GB+). Install the **Voice Training** add-on when asked, add your recordings, say what the voice is for (speech is included; the singing model is a small optional download), choose a quality and click **Start training**. One training on this PC and one in the cloud can run at the same time, and **Train in the background** lets you keep using Live, Speak and Dub:
   - Quick test: about 10–20 minutes.
   - Good (recommended): about 25–50 minutes.
   - Best: about 1–2 hours.
@@ -144,8 +144,8 @@ Training makes the most faithful copy of a voice from 10–30 minutes of clean r
 
   You can also start cloud training from the [website](https://mimicore.pages.dev/train/).
 
-### Import RVC voices
-**Import RVC voices…** adds existing RVC v2 voices (a folder with `.pth`/`.onnx` and `.index`) that you have the rights to use.
+### Export and import voices
+Open a voice's **…** menu and choose **Export voice…** to save it as one `.mimivoice` file. A trained voice can include its reference recording (on by default for your own voices, off for other people's; the switch is in the dialog). On the receiving PC press **Import voice…**, choose the file and confirm you have the right to use the voice. Progress is shown (checking, unpacking, verifying, installing) and you can cancel; a damaged or changed file is refused and nothing is installed. If the name exists you can keep both or replace the old voice. There are no share links: send the file itself, only to people allowed to use the voice. Older voice folders import through **Older voice folder…** in the same dialog. You can also double-click a `.mimivoice` file in Windows, choose **Open with Mimicore**, or drop it on the Mimicore window: the same import dialog opens on that file and nothing is imported until you confirm. Files on a network location are refused; copy them to this PC first.
 
 ### Other actions
 - **▶ Preview** plays a sample.
@@ -160,16 +160,25 @@ Training makes the most faithful copy of a voice from 10–30 minutes of clean r
 - **Apply to a file** processes a recording.
 - To layer an effect on top of a cloned or trained voice, use **Live › Add an effect**.
 
-## 6. Speak: text to speech
+## 6. Speak: text to speech and Audiobook Studio
 
-1. Type or paste text, or load a `.txt` file.
+1. Type or paste text, or load a `.txt` file. Your script is saved on this PC as you type, so leaving the page or closing Mimicore never loses it.
 2. Pick a voice and a language (23 languages, including Hindi, Spanish, Japanese, Arabic and Chinese).
-3. Adjust **Emotion** and **Variation** if you like.
+3. Adjust **Emotion**, **Variation** and **Speed** (half to double speed; the pitch stays the same) if you like.
 4. Choose where it goes:
    - **Speak now** plays it on your speakers and/or the virtual microphone, so people in your call hear it. A copy is saved.
    - **Save to file** renders a WAV.
 
 Trained voices speak through the default voice, converted with the pitch matched automatically. Files are marked as AI-generated in their metadata.
+
+### Projects
+Each script is a **project**: it has a title, your text and the voice settings you chose, saved on this PC. Rename, archive and restore projects from the project list. If a save fails, the page says so and offers **Retry** before you render or switch.
+
+### Audiobook Studio
+Switch **Speak** to **Audiobook Studio** for long texts. You can import a PDF, a Word file or scanned pages (text is read from images on your PC), split the text into chapters and render them in your voice. **AI script polish** and the random narration paragraph are optional and only work when you are signed in: they send the script (or your instructions) to our server and an AI provider so a language model can write the result, so do not use them on anything private; without them Mimicore applies a built-in local cleanup, and you can undo a polish. Rendering is chapter by chapter with a journal: if the app closes or the PC restarts in the middle, reopen the project and the finished chapters are checked and kept, and the render continues from the next one.
+
+### Match an accent
+For a trained voice you can add a 10 to 20 second reference recording of the person speaking naturally and switch **Accent** on (15 regional options appear in the training dialog as **Accent / region**). Speak, Dub and Convert then carry part of that accent. It is not an exact copy, and live voice keeps your own accent.
 
 ## 7. Dub a video
 
@@ -209,14 +218,14 @@ Use combinations (Ctrl + Alt + …) or keys you don't use elsewhere (F7–F12, n
 
 ## 10. Settings
 
-Settings has six tabs: **Account**, **Hotkeys**, **Add-ons**, **General** (theme, language, graphics card, window), **Privacy & data** (data folder, error reports, support info, export or delete your account) and **About** (updates, licenses).
+Settings has seven tabs: **Account**, **Hotkeys**, **Add-ons**, **Storage** (disk use, clean-up, where the add-ons are kept), **General** (theme, language, graphics card, window), **Privacy & data** (data folder, error reports, support info, export or delete your account) and **About** (updates, licenses).
 
 - **Add-ons** are optional downloads, each with a "why" and a "skip it if":
   - **Live voice engines:** **Instant voice cloning** (powers Speak, instant cloning and live conversion of a cloned voice; Mimicore picks the model size for your PC) and **Trained voices (RVC)** (0.3 GB, runs trained or imported voices live). "Advanced: model tiers" lists the Fast, Balanced and Ultra model files for people who want to manage them.
-  - **Processing:** run on the automatically chosen best graphics card (or the CPU when there is none), or pick one yourself; the optional **Lower the quality automatically if my PC struggles** switch (off by default, not recommended).
   - **Voice training** (2.5 GB, NVIDIA only) lets this PC train RVC voices. No NVIDIA card? Use free cloud training instead.
   - **Video dubbing** (about 3 GB): translates a video's speech into your voice in another language, offline.
   - **Cloud training** (optional): connect your Google Drive to train on a free Google GPU.
+- **Storage:** shows how much disk space Mimicore uses (add-on models, the Voice Training pack, voices, training runs, projects, results, temporary files, logs) and how much is free. **Clean up** removes only what Mimicore can make again: temporary files older than a day, leftovers of stopped downloads, and old results (older than 30 days, 90 days or a year) that no saved project uses; it asks before deleting results. Voices, recordings, unfinished trainings (checkpoints), saved projects and installed add-ons are never touched. **Where the add-ons are stored** is by default inside the data folder (`%LOCALAPPDATA%\Mimicore\models`); **Move to another folder…** copies the add-on models and the Voice Training pack (about 2 GB and several GB) to a folder on another drive inside this PC (not a network or removable drive, not Windows or Program Files), checks every file, and after you restart Mimicore uses the new place and removes the old copy. Cancel leaves everything as it was. The Mimicore uninstaller does not delete a custom storage folder: delete it yourself if you remove Mimicore for good. If that drive is missing when Mimicore starts, downloads pause and the page offers to choose another folder or use the default one (the add-ons would then be downloaded again). Mimicore warns before a download or a training when the drive is too full.
 - **Account:** your plan (Free or Studio, with a "trial" tag during a free trial), **See plans**, sign out.
   - Free plan: all 28 effects and the soundboard, unlimited live AI voice with the 19 gallery voices, 60 minutes a day with your own voices, one voice clone, Speak clips up to 3 minutes (about 2,700 characters), Dub and conversion clips up to 2 minutes; no mixing, importing or training.
   - Always free: effects, the soundboard, the gallery and built-in voices.
@@ -224,16 +233,18 @@ Settings has six tabs: **Account**, **Hotkeys**, **Add-ons**, **General** (theme
 - **Hotkeys:** see section 9.
 - **Models & add-ons:** the two live engines, Voice Training and Dubbing. Mimicore measures your PC by itself in the background.
 - **Appearance & language:** dark, light or match Windows. The interface is available in English, हिन्दी, Español, Português, Français, Deutsch, Русский, 日本語 and Bahasa Indonesia.
-- **Updates:** Mimicore checks automatically and can download updates in the background. You choose when to restart.
+- **Updates:** Mimicore checks automatically and can download updates in the background. You choose when: **Restart and install** now, or **Install when I quit** (the update installs after you close Mimicore, never while Live or a job is running, and Mimicore does not reopen).
+- **Downloads:** an interrupted add-on or model download continues where it stopped (also after a restart or a lost connection) and every file is checked against its known checksum at the end. The progress shows speed and time left; after a failure it retries with growing pauses. On a slow or offline PC, download the add-on files on another PC (or earlier) and use **Install from a folder...** or **Install from files...** on the add-on in Settings > Add-ons; Mimicore checks every file the same way and tells you what is still missing. Mimicore uses the Windows proxy setting or the `HTTPS_PROXY` variable; if a proxy blocks a download it says so.
+- **Taskbar and notifications:** the Mimicore button on the Windows taskbar shows the progress of downloads, training and renders. When a voice training or a long render (20 seconds or more) finishes while Mimicore is in the background, Windows shows a notification and the button flashes. Switch it off in Settings > General > **Notify me when long jobs finish**.
 - **Processing:** pick the graphics card. Any DirectX 12 card works: NVIDIA, AMD or Intel.
 - **Cloud training:** see which Google account is connected, or disconnect it.
-- **Your data:** open the data folder, and optionally **Send error reports** (off by default; never includes audio, voices or text).
+- **Your data:** open the data folder, and optionally **Send error reports** (off by default). **Anonymous performance diagnostics** (technical numbers only: timings, error counts, app and Windows versions, graphics card family; a random PC id that changes monthly) are on by default and can be switched off under Settings > Privacy & data, where **Reset PC id** gives a new id at once. Audio, recordings, scripts, file and voice names and your account are never included. Early builds for testers (Settings > About > Check for early release) send a little more detail, such as the full graphics card name. Local testing ZIPs are separate.
 
 ## 11. Use cases: step-by-step recipes
 
 ### Gaming with friends on Discord
 1. Set up the virtual mic (section 2) and select **CABLE Output** in Discord.
-2. Pick a voice (an instant voice, a trained voice, or an effect) and press **Start** - quality is chosen automatically for your PC.
+2. Pick a voice; adjust the trained-voice latency and quality slider before pressing **Start**.
 3. Set a **Push-to-talk** key and a **Start / stop** hotkey.
 4. Add soundboard clips with hotkeys for instant reactions.
 
@@ -248,9 +259,9 @@ Settings has six tabs: **Account**, **Hotkeys**, **Add-ons**, **General** (theme
 3. Replace the audio track in your editor and upload the SRT as subtitles.
 
 ### Voiceovers, narration and audiobooks
-1. Install the **Ultra** tier for the most polished speech.
-2. In **Speak**, paste your script, pick your voice and language, and choose **Save to file**.
-3. Long texts are rendered sentence by sentence.
+1. Optional: for the most polished speech install the **Ultra** engine size (Settings › Add-ons › Advanced).
+2. In **Speak** (or **Audiobook Studio** for a book), paste or import your script, pick your voice and language, and choose **Save to file**.
+3. Long texts are rendered sentence by sentence, chapter by chapter in Audiobook Studio, and an interrupted render resumes.
 
 ### Private, anonymous calls
 1. Pick a **gallery voice** or a mix, so the voice belongs to no real person.
@@ -275,16 +286,19 @@ The **Support** tab (sign in first) is an assistant that knows the whole app and
 - **If it can't**, it creates a support ticket for you (**Talk to a person** does this on request). You get an email at every step: received, confirmed as a real defect, fix in progress, a test build ready, resolved.
 - **Report a bug:** type what you did and roughly when it happened, then press **Report a bug**. Mimicore picks the matching part of its local log (it records the pages and buttons you used, never what you type), removes your Windows user name and email addresses, and shows you what it would attach. Nothing is sent until you press **Send ticket with log** (or **Send without log**).
 - **Your tickets** are listed at the top with their status. When a fix is ready you are emailed a link to an **early build**, or open **Settings › Updates › Check for early release**. Early builds are never installed automatically. Try what went wrong and press **It is fixed** or **Still broken**.
-- Deleting your account deletes your tickets, chats and logs.
+- **Send feedback:** for an idea, praise or a question (not a problem you need solved), press **Send feedback** on the Support page or in **Settings › About**, or use the form at [mimicore.pages.dev/feedback](https://mimicore.pages.dev/feedback/) without an account. Pick what it is about, add a rating if you like, write your message and press Send. Leaving an e-mail address (and ticking the box that lets us write back) is optional, as is **Attach technical details** (your app and Windows version, graphics card type and, while Live runs, its speed numbers; never audio, file names or logs). Offline, the app keeps your message and sends it when you are back online. Feedback is kept 12 months.
+- **Check my setup:** if something does not work, press **Check my setup** on the Support page. It runs quick, read-only checks (a few seconds, all at once) of Windows and WebView2, Windows microphone privacy, your microphone (and whether sound arrives), headphones or speakers, the virtual cable, the graphics card, the add-ons (size and SHA-256 against the list that ships with the app), free disk space, the internet, your Mimicore version and your plan. Each result is green, amber or red with a plain explanation and, where one exists, a button that opens the right Windows settings or Mimicore page. Nothing is changed, downloaded or started, and an offline PC is fine for Live. **Copy report** gives a text with no file paths, e-mail addresses or names; **Send with feedback** opens Send feedback with that report in the message. Not installed yet? The page [mimicore.pages.dev/requirements](https://mimicore.pages.dev/requirements/) makes a guess from your browser (nothing leaves it); the app's own check is the authoritative one.
+- Deleting your account deletes your tickets, chats, logs and feedback.
 
 ## 13. Troubleshooting
 
 | Problem | Fix |
 |---|---|
+| I am not sure what is wrong | Open **Support › Check my setup**. It checks the microphone, Windows microphone privacy, the virtual cable, the graphics card, the add-ons, disk space and the internet in a few seconds and tells you what to fix. |
 | Others can't hear me | Check that the voice is started, the **Output › Virtual mic** isn't Off, and the other app's microphone is **CABLE Output**. |
 | I hear an echo or howling | Use headphones, or turn off **Hear myself**. |
-| The voice sounds robotic or glitchy | Close other apps that use the graphics card, use a wired headset, and check that Settings › General › Processing uses your best card. |
-| Too much delay | Close programs that use the graphics card; trained voices trade a little delay for likeness. Bluetooth headsets add their own delay, so wired is better. |
+| The voice sounds robotic or glitchy | Close other apps that use the graphics card, use a wired headset, plug in a laptop charger, and check that Settings › General › Processing uses your best card. For a trained voice also try another slider position or the **Faster** option. |
+| Too much delay | For a trained voice, stop Live and move the Latency and quality slider to the left; positions to the right add delay on purpose. Close programs that use the graphics card. Bluetooth headsets add their own delay, so wired is better. |
 | My mic is too quiet | Keep **Automatic level** on, or raise the mic level in Windows sound settings. **Calibrate** shows warnings for quiet or clipping mics. |
 | Keyboard or fan noise comes through | Turn on **Noise suppression** and set the **Noise gate** to Medium. |
 | Training is greyed out | Training on the PC needs an NVIDIA card. Use **Cloud (free)** instead. |
@@ -293,15 +307,20 @@ The **Support** tab (sign in first) is an assistant that knows the whole app and
 | "Used today's free live minutes" | Free live minutes (60 a day) refill every day. Studio removes the limit. |
 | "Account in use on another PC" | Paid plans can be used on all your PCs, with 1 active PC at a time. Starting on a new PC takes priority and pauses the previous PC. |
 | "…is part of Studio" | More than one instant voice, mixing, importing, training and long Speak / Dub clips need Studio (or a Studio free trial, start it on your account page). |
+| "Mimicore did not close properly last time" | Choose **Open normally**, or **Start in safe mode** (also: start with `--safe` or hold **Shift** while Mimicore starts). Your voices, projects and settings are not touched. After two such closes in a row Mimicore starts in safe mode by itself. Safe mode switches off Live, the graphics card, hotkeys, updates and uploads; voices, Settings, Help and Send feedback still work. Restart to leave it. **Send feedback with details** pre-fills a problem report with a short crash code. |
 | Something else | Ask the **Support** tab: it answers or opens a ticket for you. Or Settings › Your data › **Copy support info** copies versions, graphics card, key settings and the last log lines (no personal data) to paste into your message. **Open data folder** has the full logs (`logs\mimicore.log`). The support email is on the website's contact page. |
 
 ## 14. Privacy and responsible use
 
 - **Your voice, your device, your cloud. Never ours.** Live voice, cloning, effects, speech, dubbing and training on your PC all run locally. Microphone audio is processed in memory and never stored or sent.
 - Optional cloud training uses only **your own** Google Drive and Colab. Mimicore can see only the files it creates there.
-- The Support assistant sends what you type to our server and an AI provider; do not type passwords or payment details. Tickets (conversation plus a log you approve) are kept until you delete your account. We otherwise store only your account email and plan. Error reports are off unless you turn them on.
+- The Support assistant sends what you type to our server and an AI provider; do not type passwords or payment details. The same applies to the optional AI script polish and random narration in Audiobook Studio, which send the script to an AI provider through our server when you are signed in. Tickets (conversation plus a log you approve) are kept until you delete your account. We otherwise store only your account email and plan. Error reports are off unless you turn them on.
 - Clone only your own voice or voices you have permission to use. Never use a cloned voice to deceive, defraud or impersonate anyone. Generated files are marked as AI-generated.
 - Full texts: [Acceptable Use](https://mimicore.pages.dev/legal/acceptable-use/) · [License](https://mimicore.pages.dev/legal/eula/) · [Privacy](https://mimicore.pages.dev/legal/privacy/).
+
+## Collect a testing log
+
+Open Settings > Privacy & data > Testing log. Start a session, test the app, and press Mark issue immediately when something goes wrong. The session continues after restarting Mimicore. Finish with Stop testing log and Export testing log. Review the ZIP before sharing it; no automatic upload occurs. It contains system details, app events, errors and detailed Live timings, but no audio attachments or typed scripts. Device and file names can remain after redaction. The local folder is `%LOCALAPPDATA%\Mimicore\testing-logs` (or your `MIMICORE_HOME`). Each session stops at 128 MB, with four sessions retained; move exported older files elsewhere to make room. Detailed logging adds some overhead.
 
 ---
 
