@@ -27,6 +27,10 @@ PATCHES = [
      "                index = faiss.read_index(file_index)",
      "                index = faiss.deserialize_index(np.fromfile(file_index, dtype=np.uint8))  # unicode-safe",
      "required"),
+    ("rvc/train/train.py",  # multi-scale mel loss captures fine formants and consonant harmonics
+     "multiscale_mel_loss = False",
+     "multiscale_mel_loss = True",
+     "legacy"),
     ("rvc/train/train.py",  # logs on the data root (3.6.5-era layout; 3.6.6 honors APPLIO_LOGS_DIR itself)
      'experiment_dir = os.path.join(current_dir, "logs", model_name)',
      'experiment_dir = os.path.join(os.environ.get("APPLIO_LOGS_ROOT") or os.path.join(current_dir, "logs"), model_name)',

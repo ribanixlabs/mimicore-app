@@ -165,7 +165,7 @@ def synth_module(net):
             n = self.net
             g = n.emb_g(sid).unsqueeze(-1)
             m_p, logs_p, x_mask = n.enc_p(feats, pitch, p_len)
-            z_p = (m_p + torch.exp(logs_p) * torch.randn_like(m_p) * 0.66666) * x_mask
+            z_p = (m_p + torch.exp(logs_p) * torch.randn_like(m_p) * 0.33333) * x_mask
             z_p, x_mask, nsff0 = z_p[:, :, head:], x_mask[:, :, head:], pitchf[:, head:]
             z = n.flow(z_p, x_mask, g=g, reverse=True)
             return torch.clamp(n.dec(z * x_mask, nsff0, g=g)[0, 0], -1.0, 1.0)
