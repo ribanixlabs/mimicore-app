@@ -205,6 +205,61 @@ def speech_check(files):
     return ok, voiced, total
 
 
+def write_audio(path, x, sr):
+    """Write mono 16-bit PCM audio. Tries soundfile, then scipy.io.wavfile, then wave."""
+    import numpy as np
+
+    x = np.clip(x, -1.0, 1.0)
+    try:
+        import soundfile as sf
+
+        sf.write(str(path), x, sr, subtype="PCM_16")
+        return
+    except ImportError:
+        pass
+    try:
+        from scipy.io import wavfile
+
+        pcm = (x * 32767.0).astype(np.int16)
+        wavfile.write(str(path), sr, pcm)
+        return
+    except ImportError:
+        pass
+    import wave
+
+    pcm = (x * 32767.0).astype("<i2")
+    with wave.open(str(path), "wb") as w:
+        w.setnchannels(1)
+        w.setsampwidth(2)
+        w.setframerate(sr)
+        w.writeframes(pcm.tobytes())
+
+
+def normalize_slices(files):
+    """Normalize gain, remove DC offset, and tame peak amplitudes across sliced audio chunks."""
+    try:
+        import numpy as np
+    except Exception:
+        return
+    for p in files:
+        try:
+            x, sr = read_audio(p)
+            if x.ndim > 1:
+                x = x.mean(axis=1)
+            # Remove DC offset
+            x = x - float(np.mean(x))
+            peak = float(np.max(np.abs(x)))
+            if peak < 1e-4:
+                continue
+            # Peak normalize to -1.0 dBFS (approx 0.89125) with up to +12 dB (4x) boost cap
+            target_peak = 0.89125
+            gain = min(target_peak / peak, 4.0)
+            x_norm = np.clip(x * gain, -1.0, 1.0)
+            write_audio(p, x_norm, sr)
+        except Exception:
+            continue
+
+
 def best_checkpoint(run_dir, cps):
     """Checkpoint with the lowest smoothed validation mel loss (late epochs can over-train). Falls back to the last."""
     try:
@@ -335,6 +390,7 @@ def main():
     if not sliced_files:
         raise SystemExit("Preprocessing produced no sliced audio files. Make sure the dataset audio recordings are valid, "
                          "contain audible speech, and are not locked by another program.")
+    normalize_slices(sliced_files)
     ok, voiced, total = speech_check(sorted(sliced_files))
     print(f"speech check: {voiced:.0f} s of voiced speech in {total:.0f} s of audio", flush=True)
     if not ok:
