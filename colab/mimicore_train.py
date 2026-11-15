@@ -20,6 +20,8 @@ import subprocess
 import sys
 from pathlib import Path
 
+os.environ["MPLBACKEND"] = "Agg"  # Force headless matplotlib backend (prevents Colab inline backend ValueError)
+
 NO_WINDOW = 0x08000000 if os.name == "nt" else 0  # Windows: no console window; Linux (Colab cloud training): unused
 SR = 48000
 TITAN = Path("rvc/models/pretraineds/custom/TITAN_Medium_recommended_for_speech")
@@ -64,8 +66,9 @@ DISK_FULL = ("no space left on device", "errno 28", "not enough space on the dis
 
 def run(args):
     oom = disk_full = False
+    env = dict(os.environ, MPLBACKEND="Agg")
     p = subprocess.Popen([sys.executable, *map(str, args)], stdout=subprocess.PIPE, stderr=subprocess.STDOUT,
-                         creationflags=NO_WINDOW)
+                         creationflags=NO_WINDOW, env=env)
     buf = b""
     for ch in iter(lambda: p.stdout.read(1), b""):
         if ch not in (b"\n", b"\r"):
