@@ -235,6 +235,52 @@ def write_audio(path, x, sr):
         w.writeframes(pcm.tobytes())
 
 
+def prune_clutter_slices(files, min_snr_db=15.0):
+    """Prune low-SNR noise/silence clutter slices before training.
+
+    Filters out background hum, keyboard clatter, breathing pops, and low-SNR takes (<15 dB)
+    before RMVPE pitch and ContentVec feature extraction.
+    """
+    try:
+        import numpy as np
+    except Exception:
+        return files
+    retained = []
+    pruned_count = 0
+    for p in files:
+        try:
+            x, sr = read_audio(p)
+            if x.ndim > 1:
+                x = x.mean(axis=1)
+            # Remove DC offset
+            x = x - float(np.mean(x))
+            peak = float(np.max(np.abs(x)))
+            if peak < 0.005:  # essentially silent or mic pop
+                p.unlink(missing_ok=True)
+                pruned_count += 1
+                continue
+
+            frame_len = max(128, int(sr * 0.02))
+            n_frames = len(x) // frame_len
+            if n_frames >= 4:
+                frames = x[:n_frames * frame_len].reshape(n_frames, frame_len)
+                frame_rms = np.sqrt(np.mean(frames ** 2, axis=1) + 1e-9)
+                noise_floor = float(np.percentile(frame_rms, 10))
+                signal_level = float(np.percentile(frame_rms, 90))
+                snr_db = 20.0 * np.log10((signal_level + 1e-6) / (noise_floor + 1e-6))
+                if snr_db < min_snr_db and signal_level < 0.02:
+                    p.unlink(missing_ok=True)
+                    pruned_count += 1
+                    continue
+            retained.append(p)
+        except Exception:
+            retained.append(p)
+            continue
+    if pruned_count > 0:
+        print(f"dataset SNR pruner: retained {len(retained)} of {len(files)} slices (pruned {pruned_count} noisy/silent takes)", flush=True)
+    return retained
+
+
 def normalize_slices(files):
     """Normalize gain, remove DC offset, and tame peak amplitudes across sliced audio chunks."""
     try:
@@ -390,6 +436,7 @@ def main():
     if not sliced_files:
         raise SystemExit("Preprocessing produced no sliced audio files. Make sure the dataset audio recordings are valid, "
                          "contain audible speech, and are not locked by another program.")
+    sliced_files = prune_clutter_slices(sliced_files)
     normalize_slices(sliced_files)
     ok, voiced, total = speech_check(sorted(sliced_files))
     print(f"speech check: {voiced:.0f} s of voiced speech in {total:.0f} s of audio", flush=True)
@@ -399,13 +446,22 @@ def main():
     run(["rvc/train/extract/extract.py", run_dir, "rmvpe", cores, "0", SR, "contentvec", "None", "2"])
     step(3)
     cache_gpu = False
+    batch_size = a.batch
     try:
         import torch
-        if torch.cuda.is_available() and torch.cuda.get_device_properties(0).total_memory >= 6 * (1024**3):
-            cache_gpu = True
+        if torch.cuda.is_available():
+            vram_gb = torch.cuda.get_device_properties(0).total_memory / (1024**3)
+            if vram_gb >= 6.0:
+                cache_gpu = True
+            # Tesla T4 (15-16 GB) / High-end GPU saturation:
+            if a.batch in ("4", "8") and vram_gb >= 14.0:
+                batch_size = "24"
+                print(f"throughput optimizer: saturated {vram_gb:.1f} GB VRAM with batch size {batch_size}", flush=True)
+            elif a.batch in ("4",) and vram_gb >= 8.0:
+                batch_size = "12"
     except Exception:
         pass
-    run(["rvc/train/train.py", a.name, a.save_every, a.epochs, g, d, "0", a.batch, SR, True, True, cache_gpu, False,
+    run(["rvc/train/train.py", a.name, a.save_every, a.epochs, g, d, "0", batch_size, SR, True, True, cache_gpu, False,
          "HiFi-GAN", False])
     cps = checkpoints(run_dir, a.name)
     if not cps or cps[-1][0] < a.epochs - a.save_every:  # Applio exits 0 even when its worker died; tolerate save_every not dividing epochs
