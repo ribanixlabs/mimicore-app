@@ -320,6 +320,34 @@ def normalize_slices(files):
             continue
 
 
+# The most feature rows Live searches per block (rvc.rs MAX_INDEX_ROWS). Applio's own index step collapses anything above 200,000 rows (about 33 minutes
+# of speech) into 10,000 k-means centers, so a long recording ended up with about 13 times fewer retrieval points than the engine can use.
+INDEX_MAX_ROWS = 131072
+APPLIO_KMEANS_ABOVE = 200000
+
+
+def write_full_index(run_dir, name):
+    """Writes <name>.index (which Applio's extract_index.py leaves alone when it exists) as a flat index of the recordings' own feature rows, thinned
+    evenly in time to INDEX_MAX_ROWS, when the recordings have more rows than Applio would keep. Returns the rows kept, or 0 when Applio's own index is fine."""
+    import numpy as np
+
+    feats = sorted((run_dir / "extracted").glob("*.npy"))
+    total = sum(np.load(f, mmap_mode="r").shape[0] for f in feats)
+    if total <= APPLIO_KMEANS_ABOVE:
+        return 0
+    import faiss
+
+    big = np.concatenate([np.load(f) for f in feats], axis=0).astype("float32")
+    keep = np.unique(np.linspace(0, big.shape[0] - 1, INDEX_MAX_ROWS).round().astype(np.int64))
+    big = np.ascontiguousarray(big[keep])
+    ix = faiss.IndexFlatL2(big.shape[1])
+    ix.add(big)
+    with open(run_dir / f"{name}.index", "wb") as f:  # unicode-safe (faiss uses a narrow fopen)
+        f.write(faiss.serialize_index(ix).tobytes())
+    print(f"index: {total} feature rows in the recordings, kept {big.shape[0]} evenly spaced (Applio would have reduced them to 10000 centers)", flush=True)
+    return int(big.shape[0])
+
+
 def best_checkpoint(run_dir, cps):
     """Checkpoint with the lowest smoothed generator mel loss of the training run (RVC has no validation split, so this tracks fit, not over-training; it mostly picks late epochs). Falls back to the last."""
     try:
@@ -483,6 +511,10 @@ def main():
         raise SystemExit(f"Training stopped early (last saved epoch {last} of {a.epochs}). Common causes: not enough "
                          "video memory, or too little audio.")
     step(4)
+    try:
+        write_full_index(run_dir, a.name)
+    except Exception as e:  # Applio's own index step then runs as before
+        print(f"full index skipped: {e}", flush=True)
     run(["rvc/train/process/extract_index.py", run_dir, "Auto"])
     step(5)
     out = Path(a.out).resolve()
