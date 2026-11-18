@@ -3,7 +3,7 @@
 # Mimicore™ — Clone. Change. Create.
 
 **The private AI voice studio for Windows, by Ribanix Labs.**
-Live voice changer · instant voice cloning · trained voices · video dubbing · 28 free voice effects ·
+Live voice changer · instant voice cloning · trained voices · video dubbing · 46 free voice effects ·
 text-to-speech in 23 languages · soundboard. Your voice, your device, your cloud. Never ours.
 
 **[⬇ Download for Windows](https://mimicore.app/#download)** · **[Microsoft Store](https://apps.microsoft.com/detail/9P58T0P2DJJJ)** ·
@@ -27,7 +27,7 @@ text-to-speech in 23 languages · soundboard. Your voice, your device, your clou
 | 🗣️ **Text to speech** | Speak typed text live into calls or save it to files, in any of your voices. 23 languages, emotion and speed control, and optional accent matching for trained voices. |
 | 📚 **Audiobook Studio and projects** | Import PDF, Word or scanned pages, split into chapters and render them. Scripts are saved on your PC as projects and an interrupted render resumes. |
 | 🖼️ **Voice gallery and mixer** | 19 original ready-made voices, or blend two voices into a new one that's yours alone. |
-| 🎛️ **28 voice effects** | Robot, demon, chipmunk, radio, cave and more. Free and instant on any PC; you can layer them on any voice. |
+| 🎛️ **46 voice effects** | Robot, demon, chipmunk, radio, cave and more. Free and instant on any PC; you can layer them on any voice. |
 | 🔊 **Soundboard** | Built-in sounds plus your own clips, played straight into your mic. |
 | ⌨️ **Hotkeys and push-to-talk** | Start/stop, push-to-talk, mute and switch voices from inside any game. |
 | 🌐 **9 languages** | Use the app in English, हिन्दी, Español, Português, Français, Deutsch, Русский, 日本語 or Bahasa Indonesia. |
@@ -38,7 +38,7 @@ text-to-speech in 23 languages · soundboard. Your voice, your device, your clou
 
 **Free start:** new accounts in India get 30 days of Studio with no card, and outside India the Early Bird Gift gives Studio free while international payments are being set up; then the Free plan stays free forever; a first purchase of Studio also has a **7-day free trial**. A small refundable charge verifies your payment method, billing starts after the trial, and you can cancel any time before it ends and pay nothing.
 
-**Free (forever):** all 28 effects and the soundboard (no limits), hotkeys and push-to-talk, unlimited live AI voice with the 19 gallery
+**Free (forever):** all 46 effects and the soundboard (no limits), hotkeys and push-to-talk, unlimited live AI voice with the 19 gallery
 voices, 60 minutes a day with your own voice, one voice clone of your own, Speak clips up to 3 minutes, and Dub and file-conversion
 clips up to 2 minutes. It runs on your PC, so the free plan can be this generous.
 
@@ -79,8 +79,8 @@ Everything you need to go from download to talking, streaming and creating in an
 2. If Windows shows "Windows protected your PC", click **More info › Run anyway**. Mimicore is new and not yet code-signed; every update is still signed and verified by the app.
 3. The app shows no terms screen: you accept the terms once, on the download page, before the installer downloads. You must be 18 or older and clone only your own voice or voices you have permission to use.
 4. Choose a task in guided setup (Live, voiceover or Dub) and download only its prerequisites; the guide marks the task done when you have a real result. You can skip it and use the full menu. Instant voice cloning also powers Speak; trained voices use RVC. Model downloads are explicit and no background performance test runs. Optional Dubbing and Voice Training add-ons live in Settings.
-5. **Sign in** with Google, Discord or email. It is free: new accounts get 30 days of Studio free (India) or an Early Bird Gift with full Studio access (Global), with no card needed. Afterward you keep the Free plan (all 28 effects, the soundboard and 60 minutes of live AI voice every day with your own voice, plus short Speak, Dub and conversion clips) or choose Studio on your account page.
-6. A tour of every page (Live, Speak, Dub, Voices, Soundboard, Support, Settings) shows where everything is. After each update that changes the interface, a short **What's new** tour shows only what changed. Press Esc to skip a tour. The 28 voice effects work right away, even before a model finishes downloading.
+5. **Sign in** with Google, Discord or email. It is free: new accounts get 30 days of Studio free (India) or an Early Bird Gift with full Studio access (Global), with no card needed. Afterward you keep the Free plan (all 46 effects, the soundboard and 60 minutes of live AI voice every day with your own voice, plus short Speak, Dub and conversion clips) or choose Studio on your account page.
+6. A tour of every page (Live, Speak, Dub, Voices, Soundboard, Support, Settings) shows where everything is. After each update that changes the interface, a short **What's new** tour shows only what changed. Press Esc to skip a tour. The 46 voice effects work right away, even before a model finishes downloading.
 
 ## 2. Set up the virtual microphone
 
@@ -99,9 +99,9 @@ The virtual microphone lets Discord, Zoom, OBS and games hear your changed voice
 
 1. On **Live**, pick a voice or effect from the list and press the big **Start** button. The list shows your trained voices and the free effects; instant voices (the gallery voices too) and mixes also run live once you add **Instant live voices** (Settings > Add-ons; it needs a DirectX 12 graphics card). They play about 1 second behind you, so trained voices stay the choice for the lowest delay. Without the add-on they work in Speak, Dub and file conversion only. **+ New voice** opens the voice gallery.
 2. Speak. The status line shows estimated local **delay** and any **glitches**; the engine panel shows processing time.
-3. **Adjust latency and quality before starting:** on a voice, use the slider just below the voice name. Left reduces buffering with more frequent processing and less context; right favours smoothness and quality and adds delay you will hear. There are 15 positions, from about 80 ms to 1.2 s of buffering in 80 ms steps; keep it toward the left for calls and games and use the right-hand end only for streams or recordings where delay does not matter. Stop Live before adjusting; your choice stays fixed. Effects have no slider. Actual delay and smoothness depend on the voice, audio devices and PC.
-   - **Faster, slightly less accurate** (a switch under the slider, off by default): matches your voice against a smaller part of its training data so each block finishes sooner on a slow or busy graphics card. It never turns on by itself; turn it off to get exactly the normal behaviour. It applies the next time you press Start.
-4. **If Live struggles:** the status line and the Live engine panel compare processing time with the block length. Stop, move the slider to a different position, try **Faster**, close graphics-heavy apps (games, video editors) and use wired audio; on a laptop, plug in the charger. Low GPU use does not prove that audio deadlines are being met. If a notice says your graphics card is too busy, it shows at most once every 15 minutes and goes away by itself: it only suggests what to try and never changes the slider. Use a free effect if no AI voice is smooth on your PC. On the longer positions Mimicore keeps a larger output buffer and a small background job that stops the graphics card from slowing down between blocks; it uses a little extra graphics memory while Live runs (start Mimicore with the environment variable `MIMICORE_NO_KEEPALIVE=1` if you prefer the card to rest).
+3. **Adjust latency and quality before starting:** on a trained voice, use the slider just below the voice name. It has 15 positions, 80 ms to 1.2 s blocks in 80 ms steps, and shows the step, the block length and the delay to expect. Left means less delay; right means smoother sound and more delay. Accuracy is best from about 240 to 640 ms, and a slider you have never moved starts at 240 ms (about 0.4 s behind you on a mid-range graphics card). Stop Live before moving it. Effects have no slider. Actual delay and smoothness depend on the voice, audio devices and PC.
+   - **Live adjusts itself to your PC:** when you press Start it checks how fast this PC converts the voice. If a full-quality block takes too long, it uses a slightly lighter quality step, or a longer block for this session only, and says so under the slider; your saved position does not change. If the PC slows down during a call (a game starts, a laptop unplugs), Live moves to a lighter step without cutting the voice. It does not move back up during that session; the next Start measures again.
+4. **If Live struggles:** the status line and the Live engine panel compare processing time with the block length. Stop, move the slider further right, close graphics-heavy apps (games, video editors) and use wired audio; on a laptop, plug in the charger. Low GPU use does not prove that audio deadlines are being met. If a notice says your graphics card is too busy, it shows at most once every 15 minutes and goes away by itself: it only suggests what to try and never changes your saved setting. Use a free effect if no AI voice is smooth on your PC. On the longer positions Mimicore keeps a larger output buffer and a small background job that stops the graphics card from slowing down between blocks; it uses a little extra graphics memory while Live runs (start Mimicore with the environment variable `MIMICORE_NO_KEEPALIVE=1` if you prefer the card to rest).
 5. The **Live engine** panel under the stage shows what the engine is doing right now: processing time, **CPU**, **GPU**, video memory, glitches and the delay.
 
 Controls on the Live page:
@@ -233,7 +233,7 @@ Settings has seven tabs: **Account**, **Hotkeys**, **Add-ons**, **Storage** (dis
   - **Cloud training** (optional): connect your Google Drive to train on a free Google GPU.
 - **Storage:** shows how much disk space Mimicore uses (add-on models, the Voice Training pack, voices, training runs, projects, results, temporary files, logs) and how much is free. **Clean up** removes only what Mimicore can make again: temporary files older than a day, leftovers of stopped downloads, and old results (older than 30 days, 90 days or a year) that no saved project uses; it asks before deleting results. Voices, recordings, unfinished trainings (checkpoints), saved projects and installed add-ons are never touched. **Where the add-ons are stored** is by default inside the data folder (`%LOCALAPPDATA%\Mimicore\models`); **Move to another folder…** copies the add-on models and the Voice Training pack (about 2 GB and several GB) to a folder on another drive inside this PC (not a network or removable drive, not Windows or Program Files), checks every file, and after you restart Mimicore uses the new place and removes the old copy. Cancel leaves everything as it was. The Mimicore uninstaller does not delete a custom storage folder: delete it yourself if you remove Mimicore for good. If that drive is missing when Mimicore starts, downloads pause and the page offers to choose another folder or use the default one (the add-ons would then be downloaded again). Mimicore warns before a download or a training when the drive is too full.
 - **Account:** your plan (Free or Studio, with a "trial" tag during a free trial), **See plans**, sign out.
-  - Free plan: all 28 effects and the soundboard, unlimited live AI voice with the 19 gallery voices, 60 minutes a day with your own voices, one voice clone, Speak clips up to 3 minutes (about 2,700 characters), Dub and conversion clips up to 2 minutes; no mixing, importing or training.
+  - Free plan: all 46 effects and the soundboard, unlimited live AI voice with the 19 gallery voices, 60 minutes a day with your own voices, one voice clone, Speak clips up to 3 minutes (about 2,700 characters), Dub and conversion clips up to 2 minutes; no mixing, importing or training.
   - Always free: effects, the soundboard, the gallery and built-in voices.
   - Studio (monthly, annual or lifetime): everything unlimited, including your own voices live, cloning, mixing, importing, training, Speak and Dub.
 - **Hotkeys:** see section 9.
@@ -331,4 +331,4 @@ Open Settings > Privacy & data > Testing log. Start a session, test the app, and
 ---
 
 This repository hosts releases, automatic updates, model downloads, the open cloud-training notebook
-([`colab/`](colab/)) and support for Mimicore. The app's source code is private. Support: ribanixlabs@gmail.com
+([`colab/`](colab/)) and support for Mimicore. The app's source code is private. Support: support@mimicore.app
