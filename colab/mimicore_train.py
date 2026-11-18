@@ -70,6 +70,7 @@ def run(args):
     p = subprocess.Popen([sys.executable, *map(str, args)], stdout=subprocess.PIPE, stderr=subprocess.STDOUT,
                          creationflags=NO_WINDOW, env=env)
     buf = b""
+    last_reported_epoch = None
     for ch in iter(lambda: p.stdout.read(1), b""):
         if ch not in (b"\n", b"\r"):
             buf += ch
@@ -83,7 +84,10 @@ def run(args):
         disk_full = disk_full or any(k in low for k in DISK_FULL)
         m = re.search(r"\| epoch=(\d+) \|", line)
         if m:
-            say(epoch=int(m.group(1)))
+            ep = int(m.group(1))
+            if ep != last_reported_epoch:
+                last_reported_epoch = ep
+                say(epoch=ep)
         print(line, flush=True)
     tail = buf.decode("utf-8", "replace").strip()  # a final line with no trailing newline still gets classified
     if tail and "it/s]" not in tail and "s/it]" not in tail:
@@ -282,7 +286,7 @@ def prune_clutter_slices(files, min_snr_db=15.0):
 
 
 def normalize_slices(files):
-    """Normalize gain, remove DC offset, and tame peak amplitudes across sliced audio chunks."""
+    """Normalize gain, remove DC offset, trim dead edge silence, and tame peak amplitudes across sliced audio chunks."""
     try:
         import numpy as np
     except Exception:
@@ -297,17 +301,27 @@ def normalize_slices(files):
             peak = float(np.max(np.abs(x)))
             if peak < 1e-4:
                 continue
+            # Trim trailing and leading dead silence (< -45 dBFS) with a 20ms safety margin
+            thresh = 0.0056  # -45 dBFS
+            margin = int(0.020 * sr)
+            active = np.where(np.abs(x) > thresh)[0]
+            if len(active) > 0:
+                start = max(0, active[0] - margin)
+                end = min(len(x), active[-1] + margin)
+                if end - start >= int(0.200 * sr):  # Only trim if resulting slice >= 200 ms
+                    x = x[start:end]
+                    peak = float(np.max(np.abs(x)))
             # Peak normalize to -1.0 dBFS (approx 0.89125) with up to +12 dB (4x) boost cap
             target_peak = 0.89125
             gain = min(target_peak / peak, 4.0)
-            x_norm = np.clip(x * gain, -1.0, 1.0)
+            x_norm = np.clip(x * gain, -0.999, 0.999)
             write_audio(p, x_norm, sr)
         except Exception:
             continue
 
 
 def best_checkpoint(run_dir, cps):
-    """Checkpoint with the lowest smoothed validation mel loss (late epochs can over-train). Falls back to the last."""
+    """Checkpoint with the lowest smoothed generator mel loss of the training run (RVC has no validation split, so this tracks fit, not over-training; it mostly picks late epochs). Falls back to the last."""
     try:
         from tensorboard.backend.event_processing.event_accumulator import EventAccumulator
 
@@ -446,7 +460,7 @@ def main():
     run(["rvc/train/extract/extract.py", run_dir, "rmvpe", cores, "0", SR, "contentvec", "None", "2"])
     step(3)
     cache_gpu = False
-    batch_size = a.batch
+    batch_size = str(a.batch)
     try:
         import torch
         if torch.cuda.is_available():
@@ -454,11 +468,11 @@ def main():
             if vram_gb >= 6.0:
                 cache_gpu = True
             # Tesla T4 (15-16 GB) / High-end GPU saturation:
-            if a.batch in ("4", "8") and vram_gb >= 14.0:
-                batch_size = "24"
+            if a.batch in (4, 8) and vram_gb >= 14.0:
+                batch_size = "16"
                 print(f"throughput optimizer: saturated {vram_gb:.1f} GB VRAM with batch size {batch_size}", flush=True)
-            elif a.batch in ("4",) and vram_gb >= 8.0:
-                batch_size = "12"
+            elif a.batch == 4 and vram_gb >= 8.0:
+                batch_size = "8"
     except Exception:
         pass
     run(["rvc/train/train.py", a.name, a.save_every, a.epochs, g, d, "0", batch_size, SR, True, True, cache_gpu, False,
@@ -493,7 +507,20 @@ def main():
         import numpy as np
 
         f0 = np.concatenate([np.load(f).ravel() for f in (run_dir / "f0_voiced").glob("*.npy")])
-        meta["f0_median"] = round(float(np.median(f0[f0 > 1])), 1)
+        median_hz = round(float(np.median(f0[f0 > 1])), 1)
+        meta["f0_median"] = median_hz
+        if median_hz < 115.0:
+            reg = "Bass"
+        elif median_hz < 145.0:
+            reg = "Baritone"
+        elif median_hz < 185.0:
+            reg = "Tenor"
+        elif median_hz < 260.0:
+            reg = "Alto"
+        else:
+            reg = "Soprano"
+        meta["register"] = reg
+        print(f"voice profile: median {median_hz} Hz ({reg})", flush=True)
     except Exception as e:
         print(f"pitch statistics skipped: {e}", flush=True)
     (out / "meta.json").write_text(json.dumps(meta, indent=2))
